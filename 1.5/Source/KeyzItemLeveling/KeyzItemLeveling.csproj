@@ -42,6 +42,9 @@
       <Link>Attached/Rimworld/%(RecursiveDir)/%(FileName)%(Extension)</Link>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
+    <Content Include="..\..\..\loadFolders.xml">
+      <Link>KeyzItemLeveling\loadFolders.xml</Link>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
@@ -62,24 +65,8 @@
     <AboutFiles Include="../../../About/**" Exclude="../../../About/*.png~"/>
     <CommonFiles Include="../../../Common/**" />
     <CompatibilityFiles Include="../../../Compatibility/**" />
-    
-    <ExtraFiles Include="../../../LoadFolders.xml;../../../LICENSE;../../../README.md" />
+    <ExtraFiles Include="../../../LICENSE" />
+    <ExtraFiles Include="../../../README.md" />
   </ItemGroup>
-  <Target Name="PostBuild" AfterTargets="Build" Condition=" '$(Configuration)' == 'Release' ">
-    <RemoveDir Condition="Exists('../../../Release')" Directories="../../../Release" />
-    <Delete Condition="Exists('../../../$(AssemblyName).zip')" Files="../../../$(AssemblyName).zip" />
-    <Copy SourceFiles="@(AboutFiles)" DestinationFiles="@(AboutFiles->'../../../Release/About/%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
-    <Copy SourceFiles="@(CommonFiles)" DestinationFiles="@(CommonFiles->'../../../Release/Common/%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
-    <Copy SourceFiles="@(CompatibilityFiles)" DestinationFiles="@(CompatibilityFiles->'../../../Release/Compatibility/%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
-    
-    <Copy SourceFiles="@(ReleaseFiles)" DestinationFiles="@(ReleaseFiles->'../../../Release/%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="false" />
-    <Copy SourceFiles="@(ExtraFiles)" DestinationFolder="../../../Release/" SkipUnchangedFiles="false" />
-    <ZipDirectory DestinationFile="../../../$(AssemblyName).zip" SourceDirectory="../../../Release" />
-    <RemoveDir Condition="Exists('$(SteamModsPath)')" Directories="$(SteamModsPath)/$(AssemblyName)" ContinueOnError="true"/>
-    <Copy Condition="Exists('$(SteamModsPath)')" SourceFiles="@(ReleaseFolder)" DestinationFiles="@(ReleaseFolder->'$(SteamModsPath)/$(AssemblyName)/%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
-  </Target>
-  <Target Name="CleanRelease" AfterTargets="Clean">
-    <RemoveDir Directories="$(ReleasePath)" Condition="Exists('$(ReleasePath)')" />
-    <Delete Files="$(ZipFilePath)" Condition="Exists('$(ZipFilePath)')" />
-  </Target>
+
 </Project>

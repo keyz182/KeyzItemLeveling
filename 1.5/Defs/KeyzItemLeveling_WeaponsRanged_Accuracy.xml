@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Accuracy_1</defName>
+        <label>Accuracy I</label>
+        <description>+1% to Accuracy</description>
+        <Cost>10</Cost>
+        <StatMultipliers>
+            <AccuracyLong>1.01</AccuracyLong>
+            <AccuracyShort>1.01</AccuracyShort>
+            <AccuracyMedium>1.01</AccuracyMedium>
+        </StatMultipliers>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Accuracy_2</defName>
+        <label>Accuracy II</label>
+        <description>+1% to Accuracy</description>
+        <Cost>20</Cost>
+        <Prerequisite>KIL_Accuracy_1</Prerequisite>
+        <StatMultipliers>
+            <AccuracyLong>1.01</AccuracyLong>
+            <AccuracyShort>1.01</AccuracyShort>
+            <AccuracyMedium>1.01</AccuracyMedium>
+        </StatMultipliers>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Accuracy_3</defName>
+        <label>Accuracy III</label>
+        <description>+1% to Accuracy</description>
+        <Cost>20</Cost>
+        <Prerequisite>KIL_Accuracy_2</Prerequisite>
+        <StatMultipliers>
+            <AccuracyLong>1.01</AccuracyLong>
+            <AccuracyShort>1.01</AccuracyShort>
+            <AccuracyMedium>1.01</AccuracyMedium>
+        </StatMultipliers>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Accuracy_4</defName>
+        <label>Accuracy IV</label>
+        <description>+1% to Accuracy</description>
+        <Cost>20</Cost>
+        <Prerequisite>KIL_Accuracy_3</Prerequisite>
+        <StatMultipliers>
+            <AccuracyLong>1.01</AccuracyLong>
+            <AccuracyShort>1.01</AccuracyShort>
+            <AccuracyMedium>1.01</AccuracyMedium>
+        </StatMultipliers>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Accuracy_5</defName>
+        <label>Accuracy V</label>
+        <description>+1% to Accuracy</description>
+        <Cost>20</Cost>
+        <Prerequisite>KIL_Accuracy_4</Prerequisite>
+        <StatMultipliers>
+            <AccuracyLong>1.01</AccuracyLong>
+            <AccuracyShort>1.01</AccuracyShort>
+            <AccuracyMedium>1.01</AccuracyMedium>
+        </StatMultipliers>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Accuracy_Long</defName>
+        <label>Accuracy Long Range</label>
+        <description>+5% to Accuracy Long Range</description>
+        <Cost>20</Cost>
+        <Prerequisite>KIL_Accuracy_5</Prerequisite>
+        <StatMultipliers>
+            <AccuracyLong>1.05</AccuracyLong>
+        </StatMultipliers>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Accuracy_Medium</defName>
+        <label>Accuracy Medium Range</label>
+        <description>+5% to Accuracy Medium Range</description>
+        <Cost>20</Cost>
+        <Prerequisite>KIL_Accuracy_5</Prerequisite>
+        <StatMultipliers>
+            <AccuracyMedium>1.05</AccuracyMedium>
+        </StatMultipliers>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Accuracy_Short</defName>
+        <label>Accuracy Short Range</label>
+        <description>+5% to Accuracy Short Range</description>
+        <Cost>20</Cost>
+        <Prerequisite>KIL_Accuracy_5</Prerequisite>
+        <StatMultipliers>
+            <AccuracyShort>1.05</AccuracyShort>
+        </StatMultipliers>
+    </KeyzItemLeveling.UpgradeDef>
+</Defs>
