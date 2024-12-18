@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 using Verse;
 
 namespace KeyzItemLeveling.Graph;
@@ -28,9 +29,9 @@ public class UpgradeGraph(ThingType thingType)
     {
         Roots.Clear();
 
-        List<UpgradeDef> defs = DefDatabase<UpgradeDef>.AllDefs.Where(def=>def.ForThingType == ThingType).ToList();
+        List<UpgradeDef> defs = DefDatabase<UpgradeDef>.AllDefs.Where(def=>def.forThingType == ThingType).ToList();
 
-        List<UpgradeDef> roots = defs.Where(def => def.Prerequisite == null).ToList();
+        List<UpgradeDef> roots = defs.Where(def => def.prerequisite == null).ToList();
 
         defs = defs.Except(roots).ToList();
 
@@ -47,18 +48,54 @@ public class UpgradeGraph(ThingType thingType)
                 ModLog.Warn($"- {upgradeDef.defName}");
             }
         }
+
+        RecalculatePositions();
     }
 
-    public Node ProcessNode(ref List<UpgradeDef> defs, UpgradeDef upgradeDef)
+    public void RecalculatePositions()
     {
-        Node node = new() { def = upgradeDef };
+        float x = 0f;
 
-        List<UpgradeDef> children = defs.Where(def=>def.Prerequisite == upgradeDef).ToList();
+        foreach (Node rootNode in Roots)
+        {
+            int columnWidth = rootNode.Width;
+            float columnY = 0.5f;
+
+            rootNode.Position = new Vector2(x + (columnWidth / 2f), columnY);
+
+            List<Node> row = rootNode.Children;
+
+            while (!row.NullOrEmpty())
+            {
+                columnY += 1;
+
+                int spacing = columnWidth / row.Count;
+                float rowX = x + (spacing/2f);
+
+                foreach (Node node in row)
+                {
+                    node.Position = new Vector2(rowX, columnY);
+                    rowX += spacing;
+                }
+
+                row = row.SelectMany(rowNode => rowNode.Children).ToList();
+            }
+
+            x += columnWidth;
+        }
+    }
+
+    public Node ProcessNode(ref List<UpgradeDef> defs, UpgradeDef upgradeDef, Node parentNode = null)
+    {
+        Node node = new() { def = upgradeDef, Parent = parentNode};
+
+        List<UpgradeDef> children = defs.Where(def=>def.prerequisite == upgradeDef).ToList();
         defs.RemoveAll((def) => children.Contains(def));
 
+        if(children.Count <= 0) return node;
         foreach (UpgradeDef child in children)
         {
-            node.Children.Add(ProcessNode(ref defs, child));
+            node.Children.Add(ProcessNode(ref defs, child, node));
         }
 
         return node;
@@ -67,27 +104,13 @@ public class UpgradeGraph(ThingType thingType)
     protected int? CachedDepth;
     protected int? CachedWidth;
 
-    protected int CalcWidth()
-    {
-        int maxWidth = 0;
-
-        List<Node> row = Roots.ToList();
-
-        while (row.Count > 0)
-        {
-            maxWidth = Math.Max(maxWidth, row.Count);
-
-            row = row.SelectMany(node=>node.Children).ToList();
-        }
-
-        return maxWidth;
-    }
-
     public int Depth
     {
         get
         {
-            CachedDepth ??= Roots.Max(node => node.Depth);
+            if(CachedDepth.HasValue) return CachedDepth.Value;
+            if(Roots.NullOrEmpty()) return 0;
+            CachedDepth = Roots.Max(node => node.Depth);
             return CachedDepth.Value;
         }
     }
@@ -96,7 +119,9 @@ public class UpgradeGraph(ThingType thingType)
     {
         get
         {
-            CachedWidth ??= CalcWidth();
+            if(CachedWidth.HasValue) return CachedWidth.Value;
+            if(Roots.NullOrEmpty()) return 0;
+            CachedWidth = Roots.Sum(node=>node.Width);
             return CachedWidth.Value;
         }
     }

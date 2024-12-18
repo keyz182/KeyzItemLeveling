@@ -71,6 +71,12 @@
     <CompatibilityFiles Include="../../../Compatibility/**" />
     <ExtraFiles Include="../../../LICENSE" />
     <ExtraFiles Include="../../../README.md" />
+    <ReleaseFiles Update="..\..\Defs\KeyzItemLeveling_WeaponsRanged_Cooldown.xml">
+      <Link>KeyzItemLeveling\1.5\Defs\KeyzItemLeveling_WeaponsRanged_Cooldown.xml</Link>
+    </ReleaseFiles>
+    <ReleaseFiles Update="..\..\Defs\KeyzItemLeveling_WeaponsRanged_DamageMultiplier.xml">
+      <Link>KeyzItemLeveling\1.5\Defs\KeyzItemLeveling_WeaponsRanged_DamageMultiplier.xml</Link>
+    </ReleaseFiles>
   </ItemGroup>
 
 </Project>

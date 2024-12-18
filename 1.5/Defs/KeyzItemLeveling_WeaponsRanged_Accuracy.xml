@@ -1,92 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <KeyzItemLeveling.UpgradeDef>
-        <defName>KIL_Accuracy_1</defName>
+        <defName>KIL_WR_Accuracy_1</defName>
         <label>Accuracy I</label>
         <description>+1% to Accuracy</description>
-        <Cost>10</Cost>
-        <StatFactors>
+        <forThingType>WeaponRanged</forThingType>
+        <cost>10</cost>
+        <statFactors>
             <AccuracyLong>1.01</AccuracyLong>
             <AccuracyShort>1.01</AccuracyShort>
             <AccuracyMedium>1.01</AccuracyMedium>
-        </StatFactors>
+        </statFactors>
     </KeyzItemLeveling.UpgradeDef>
     <KeyzItemLeveling.UpgradeDef>
-        <defName>KIL_Accuracy_2</defName>
+        <defName>KIL_WR_Accuracy_2</defName>
         <label>Accuracy II</label>
         <description>+1% to Accuracy</description>
-        <Cost>20</Cost>
-        <Prerequisite>KIL_Accuracy_1</Prerequisite>
-        <StatFactors>
+        <forThingType>WeaponRanged</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_WR_Accuracy_1</prerequisite>
+        <statFactors>
             <AccuracyLong>1.01</AccuracyLong>
             <AccuracyShort>1.01</AccuracyShort>
             <AccuracyMedium>1.01</AccuracyMedium>
-        </StatFactors>
+        </statFactors>
     </KeyzItemLeveling.UpgradeDef>
     <KeyzItemLeveling.UpgradeDef>
-        <defName>KIL_Accuracy_3</defName>
+        <defName>KIL_WR_Accuracy_3</defName>
         <label>Accuracy III</label>
         <description>+1% to Accuracy</description>
-        <Cost>20</Cost>
-        <Prerequisite>KIL_Accuracy_2</Prerequisite>
-        <StatFactors>
+        <forThingType>WeaponRanged</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_WR_Accuracy_2</prerequisite>
+        <statFactors>
             <AccuracyLong>1.01</AccuracyLong>
             <AccuracyShort>1.01</AccuracyShort>
             <AccuracyMedium>1.01</AccuracyMedium>
-        </StatFactors>
+        </statFactors>
     </KeyzItemLeveling.UpgradeDef>
     <KeyzItemLeveling.UpgradeDef>
-        <defName>KIL_Accuracy_4</defName>
+        <defName>KIL_WR_Accuracy_4</defName>
         <label>Accuracy IV</label>
         <description>+1% to Accuracy</description>
-        <Cost>20</Cost>
-        <Prerequisite>KIL_Accuracy_3</Prerequisite>
-        <StatFactors>
+        <forThingType>WeaponRanged</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_WR_Accuracy_3</prerequisite>
+        <statFactors>
             <AccuracyLong>1.01</AccuracyLong>
             <AccuracyShort>1.01</AccuracyShort>
             <AccuracyMedium>1.01</AccuracyMedium>
-        </StatFactors>
+        </statFactors>
     </KeyzItemLeveling.UpgradeDef>
     <KeyzItemLeveling.UpgradeDef>
-        <defName>KIL_Accuracy_5</defName>
+        <defName>KIL_WR_Accuracy_5</defName>
         <label>Accuracy V</label>
         <description>+1% to Accuracy</description>
-        <Cost>20</Cost>
-        <Prerequisite>KIL_Accuracy_4</Prerequisite>
-        <StatFactors>
+        <forThingType>WeaponRanged</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_WR_Accuracy_4</prerequisite>
+        <statFactors>
             <AccuracyLong>1.01</AccuracyLong>
             <AccuracyShort>1.01</AccuracyShort>
             <AccuracyMedium>1.01</AccuracyMedium>
-        </StatFactors>
+        </statFactors>
     </KeyzItemLeveling.UpgradeDef>
     <KeyzItemLeveling.UpgradeDef>
-        <defName>KIL_Accuracy_Long</defName>
+        <defName>KIL_WR_Accuracy_Long</defName>
         <label>Accuracy Long Range</label>
         <description>+5% to Accuracy Long Range</description>
-        <Cost>20</Cost>
-        <Prerequisite>KIL_Accuracy_5</Prerequisite>
-        <StatFactors>
+        <forThingType>WeaponRanged</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_WR_Accuracy_5</prerequisite>
+        <statFactors>
             <AccuracyLong>1.05</AccuracyLong>
-        </StatFactors>
+        </statFactors>
     </KeyzItemLeveling.UpgradeDef>
     <KeyzItemLeveling.UpgradeDef>
-        <defName>KIL_Accuracy_Medium</defName>
+        <defName>KIL_WR_Accuracy_Medium</defName>
         <label>Accuracy Medium Range</label>
         <description>+5% to Accuracy Medium Range</description>
-        <Cost>20</Cost>
-        <Prerequisite>KIL_Accuracy_5</Prerequisite>
-        <StatFactors>
+        <forThingType>WeaponRanged</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_WR_Accuracy_5</prerequisite>
+        <statFactors>
             <AccuracyMedium>1.05</AccuracyMedium>
-        </StatFactors>
+        </statFactors>
     </KeyzItemLeveling.UpgradeDef>
     <KeyzItemLeveling.UpgradeDef>
-        <defName>KIL_Accuracy_Short</defName>
+        <defName>KIL_WR_Accuracy_Short</defName>
         <label>Accuracy Short Range</label>
         <description>+5% to Accuracy Short Range</description>
-        <Cost>20</Cost>
-        <Prerequisite>KIL_Accuracy_5</Prerequisite>
-        <StatFactors>
+        <forThingType>WeaponRanged</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_WR_Accuracy_5</prerequisite>
+        <statFactors>
             <AccuracyShort>1.05</AccuracyShort>
-        </StatFactors>
+        </statFactors>
     </KeyzItemLeveling.UpgradeDef>
 </Defs>

@@ -7,13 +7,13 @@ namespace KeyzItemLeveling;
 
 public class UpgradeDef: Def
 {
-    public ThingType ForThingType;
-    public UpgradeDef Prerequisite;
-    public float Cost;
-    public string IconPath;
+    public ThingType forThingType;
+    public UpgradeDef prerequisite;
+    public int cost;
+    public string iconPath;
 
-    public List<StatModifier> StatOffsets;
-    public List<StatModifier> StatFactors;
+    public List<StatModifier> statOffsets;
+    public List<StatModifier> statFactors;
 
     public Type WorkerClass = typeof(UpgradeWorker);
     protected UpgradeWorker _UpgradeWorkerInt;
