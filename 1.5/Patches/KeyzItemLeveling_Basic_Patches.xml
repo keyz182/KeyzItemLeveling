@@ -1,20 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-    <!-- Consider https://steamcommunity.com/sharedfiles/filedetails/?id=2810681278 to help you out -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[@Name="BaseMeleeWeapon"]/comps</xpath>
+        <value>
+            <li Class="KeyzItemLeveling.Comps.CompProperties_Levelling">
+                <thingType>Melee</thingType>
+            </li>
+        </value>
+    </Operation>
 
-    <!-- <Operation Class="PatchOperationConditional">
-        <xpath>Defs/HediffDef[defName="SomeDef"]/scenarioCanAdd</xpath>
-        <match Class="PatchOperationReplace">
-            <xpath>Defs/HediffDef[defName="SomeDef"]/scenarioCanAdd</xpath>
-            <value>
-                <scenarioCanAdd>true</scenarioCanAdd>
-            </value>
-        </match>
-        <nomatch Class="PatchOperationAdd">
-            <xpath>Defs/HediffDef[defName="SomeDef"]</xpath>
-            <value>
-                <scenarioCanAdd>true</scenarioCanAdd>
-            </value>
-        </nomatch>
-    </Operation> -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[@Name="BaseGun"]/comps</xpath>
+        <value>
+            <li Class="KeyzItemLeveling.Comps.CompProperties_Levelling">
+                <thingType>Ranged</thingType>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[@Name="ArmorMachineableBase"]/comps</xpath>
+        <value>
+            <li Class="KeyzItemLeveling.Comps.CompProperties_Levelling">
+                <thingType>Apparel</thingType>
+            </li>
+        </value>
+    </Operation>
 </Patch>
