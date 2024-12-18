@@ -13,7 +13,7 @@ public class UpgradeDef: Def
     public string IconPath;
 
     public List<StatModifier> StatOffsets;
-    public List<StatModifier> StatMultipliers;
+    public List<StatModifier> StatFactors;
 
     public Type WorkerClass = typeof(UpgradeWorker);
     protected UpgradeWorker _UpgradeWorkerInt;
