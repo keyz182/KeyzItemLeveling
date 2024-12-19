@@ -49,6 +49,9 @@
     <Content Include="..\..\..\loadFolders.xml">
       <Link>KeyzItemLeveling\loadFolders.xml</Link>
     </Content>
+    <Content Include="..\..\..\modList.xml">
+      <Link>KeyzItemLeveling\modList.xml</Link>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
