@@ -23,7 +23,8 @@ public class UpgradeGraph(ThingType thingType)
         return _Graphs[thingType];
     }
 
-    public HashSet<Node> Roots = new HashSet<Node>();
+    // Not hashset, order is important
+    public List<Node> Roots = new List<Node>();
 
     public void Initialize()
     {
@@ -35,7 +36,7 @@ public class UpgradeGraph(ThingType thingType)
 
         defs = defs.Except(roots).ToList();
 
-        foreach (UpgradeDef upgradeDef in roots)
+        foreach (UpgradeDef upgradeDef in roots.OrderBy(def=>def.order))
         {
             Roots.Add(ProcessNode(ref defs, upgradeDef));
         }

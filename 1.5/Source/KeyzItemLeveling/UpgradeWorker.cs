@@ -1,4 +1,5 @@
 using KeyzItemLeveling.Comps;
+using Verse;
 
 namespace KeyzItemLeveling;
 
@@ -15,5 +16,10 @@ public class UpgradeWorker(UpgradeDef def)
     {
         compItemLevelling.upgrades.Add(this.def);
         return true;
+    }
+
+    public virtual void ProcessProjectile(Projectile projectile)
+    {
+
     }
 }

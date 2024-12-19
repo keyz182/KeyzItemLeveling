@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_Rename</defName>
+        <label>Rename Apparel</label>
+        <description>Allows you to rename the apparel</description>
+        <forThingType>Apparel</forThingType>
+        <allowRenaming>true</allowRenaming>
+        <order>1</order>
+        <cost>50</cost>
+    </KeyzItemLeveling.UpgradeDef>
+</Defs>

@@ -46,7 +46,7 @@
         </nomatch>
     </Operation>
     <Operation Class="PatchOperationAdd">
-        <xpath>Defs/ThingDef[@Name="ArmorMachineableBase"]/comps</xpath>
+        <xpath>Defs/ThingDef[@Name="ApparelNoQualityBase"]/comps</xpath>
         <value>
             <li Class="KeyzItemLeveling.Comps.CompProperties_ItemLevelling">
                 <thingType>Apparel</thingType>

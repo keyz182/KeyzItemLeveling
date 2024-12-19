@@ -10,7 +10,7 @@ namespace KeyzItemLeveling.Comps;
 [StaticConstructorOnStartup]
 public class CompItemLevelling : ThingComp
 {
-    protected float experience = 0;
+    public float experience = 0;
     public HashSet<UpgradeDef> upgrades = new();
 
     public int tickEquipped = -1;
@@ -22,10 +22,9 @@ public class CompItemLevelling : ThingComp
 
     public CompProperties_ItemLevelling Props => (CompProperties_ItemLevelling)props;
 
-    private static readonly Texture2D Upgrades = ContentFinder<Texture2D>.Get("UI/Upgrades/KIL_UpgradeButton");
-    private static readonly Texture2D Add10 = ContentFinder<Texture2D>.Get("UI/Upgrades/KIL_UpgradeButton10");
-    private static readonly Texture2D Add100 = ContentFinder<Texture2D>.Get("UI/Upgrades/KIL_UpgradeButton100");
-    private static readonly Texture2D Reset = ContentFinder<Texture2D>.Get("UI/Upgrades/KIL_UpgradeButtonReset");
+    public string NewName = null;
+
+    public bool AllowRenaming => upgrades.Any(upg => upg.allowRenaming);
 
     public override void PostExposeData()
     {
@@ -33,14 +32,28 @@ public class CompItemLevelling : ThingComp
         Scribe_Collections.Look(ref upgrades, "upgrades", LookMode.Def);
         Scribe_Values.Look(ref experience, "experience", 0);
         Scribe_Values.Look(ref tickEquipped, "tickEquipped", -1);
+        Scribe_Values.Look(ref NewName, "NewName", null);
     }
 
-    public override string TransformLabel(string label) => Level < 1 ? label : $"{label} [Lvl {Level}]";
+
+    public virtual string NewLabel()
+    {
+        if (AllowRenaming && !NewName.NullOrEmpty()) return NewName;
+        return GenLabel.ThingLabel(parent, 1);
+    }
+
+    public override string TransformLabel(string label)
+    {
+        if (AllowRenaming && !NewName.NullOrEmpty()) label = NewName;
+
+        return Level < 1 ? label : $"{label} [Lvl {Level}]";
+    }
 
     public override string CompInspectStringExtra()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("\nKIL_CompItemLevelling_CompInspectStringExtra".Translate(Experience, Level));
+        // sb.Append("\n");
+        sb.Append("KIL_CompItemLevelling_CompInspectStringExtra".Translate(Experience, Level));
 
         foreach (UpgradeDef upgrade in upgrades)
         {
@@ -51,7 +64,7 @@ public class CompItemLevelling : ThingComp
 
     public bool IsUpgradeValid(UpgradeDef upgrade)
     {
-        return Props.thingType == upgrade.forThingType && (upgrade.prerequisite == null || upgrades.Any(def => def == upgrade.prerequisite)) && upgrade.Worker.CanApply(this);
+        return Props.thingType == upgrade.forThingType && (upgrade.prerequisite == null || upgrades.Any(def => def == upgrade.prerequisite)) && upgrade.Worker.CanApply(this) && experience > AdjustedCost(upgrade);
     }
 
     public bool TryApplyUpgrade(UpgradeDef upgrade)
@@ -60,61 +73,17 @@ public class CompItemLevelling : ThingComp
         upgrade.Worker.Apply(this);
         statFactorCache.Clear();
         statOffsetCache.Clear();
+        experience -= AdjustedCost(upgrade);
         return true;
     }
 
     public virtual int AdjustedCost(UpgradeDef upgrade)
     {
-        return (upgrades.Count + 1) * upgrade.cost;
+        return Mathf.RoundToInt(Mathf.Pow(1.1f, upgrades.Count + 1)) * (upgrade.cost + (2*upgrades.Count));
     }
 
     public override string GetDescriptionPart() => CompInspectStringExtra();
 
-    public virtual IEnumerable<Gizmo> GetGizmos()
-    {
-        Command_Action upgBtn = new Command_Action();
-        upgBtn.defaultLabel = "Upgrades";
-        upgBtn.icon = Upgrades;
-        upgBtn.action = delegate()
-        {
-            Find.WindowStack.Add(new UpgradeDialog(this));
-        };
-
-        yield return upgBtn;
-
-
-        if (!Prefs.DevMode || !DebugSettings.godMode) yield break;
-
-        Command_Action resetBtn = new Command_Action();
-        resetBtn.defaultLabel = "Reset XP";
-        resetBtn.icon = Reset;
-        resetBtn.action = delegate()
-        {
-            experience = 0;
-        };
-
-        yield return resetBtn;
-
-        Command_Action add10 = new Command_Action();
-        add10.defaultLabel = "+10 XP";
-        add10.icon = Add10;
-        add10.action = delegate()
-        {
-            experience += 10;
-        };
-
-        yield return add10;
-
-        Command_Action add100 = new Command_Action();
-        add100.defaultLabel = "+100 XP";
-        add100.icon = Add100;
-        add100.action = delegate()
-        {
-            experience += 100;
-        };
-
-        yield return add100;
-    }
 
     public override void PostPostApplyDamage(DamageInfo dinfo, float totalDamageDealt)
     {
@@ -155,6 +124,15 @@ public class CompItemLevelling : ThingComp
     //     ApplyEquippedExperience();
     // }
 
+    public virtual void ProcessVerb(Verb verb)
+    {
+        ModLog.Log($"Verb processed {verb.ToString()}");
+    }
+
+    public virtual void ProcessProjectileLaunch(Projectile projectile)
+    {
+        ModLog.Log($"Projectile launch processed {projectile.ToString()}");
+    }
     public override void Notify_Unequipped(Pawn pawn)
     {
         ApplyEquippedExperience(true);
@@ -212,12 +190,12 @@ public class CompItemLevelling : ThingComp
 
     public override void GetStatsExplanation(StatDef stat, StringBuilder sb)
     {
-        foreach (UpgradeDef upgradeDef in upgrades.Where(upgrade=>upgrade.statFactors.Any(factor=>factor.stat == stat)))
+        foreach (UpgradeDef upgradeDef in upgrades.Where(upgrade=>!upgrade.statFactors.NullOrEmpty() && upgrade.statFactors.Any(factor=>factor.stat == stat)))
         {
             sb.AppendLine($"{upgradeDef.LabelCap} {upgradeDef.statFactors.First(factor => factor.stat == stat).ToStringAsFactor}");
         }
 
-        foreach (UpgradeDef upgradeDef in upgrades.Where(upgrade=>upgrade.statOffsets.Any(offset=>offset.stat == stat)))
+        foreach (UpgradeDef upgradeDef in upgrades.Where(upgrade=>!upgrade.statOffsets.NullOrEmpty() && upgrade.statOffsets.Any(offset=>offset.stat == stat)))
         {
             sb.AppendLine($"{upgradeDef.LabelCap} {upgradeDef.statOffsets.First(offset => offset.stat == stat).ValueToStringAsOffset}");
         }

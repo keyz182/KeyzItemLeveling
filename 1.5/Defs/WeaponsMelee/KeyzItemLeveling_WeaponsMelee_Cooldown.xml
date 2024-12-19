@@ -1,57 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <KeyzItemLeveling.UpgradeDef>
-        <defName>KIL_WR_Cooldown_1</defName>
+        <defName>KIL_WM_Cooldown_1</defName>
         <label>Cooldown I</label>
         <description>-5% to Cooldown</description>
-        <forThingType>WeaponRanged</forThingType>
+        <forThingType>WeaponMelee</forThingType>
         <cost>10</cost>
+        <order>2</order>
         <statFactors>
-            <RangedWeapon_Cooldown>0.95</RangedWeapon_Cooldown>
+            <MeleeWeapon_CooldownMultiplier>0.95</MeleeWeapon_CooldownMultiplier>
         </statFactors>
     </KeyzItemLeveling.UpgradeDef>
     <KeyzItemLeveling.UpgradeDef>
-        <defName>KIL_WR_Cooldown_2</defName>
+        <defName>KIL_WM_Cooldown_2</defName>
         <label>Cooldown II</label>
         <description>-5% to Cooldown</description>
-        <forThingType>WeaponRanged</forThingType>
+        <forThingType>WeaponMelee</forThingType>
         <cost>20</cost>
-        <prerequisite>KIL_WR_Cooldown_1</prerequisite>
+        <prerequisite>KIL_WM_Cooldown_1</prerequisite>
         <statFactors>
-            <RangedWeapon_Cooldown>0.95</RangedWeapon_Cooldown>
+            <MeleeWeapon_CooldownMultiplier>0.95</MeleeWeapon_CooldownMultiplier>
         </statFactors>
     </KeyzItemLeveling.UpgradeDef>
     <KeyzItemLeveling.UpgradeDef>
-        <defName>KIL_WR_Cooldown_3</defName>
+        <defName>KIL_WM_Cooldown_3</defName>
         <label>Cooldown III</label>
         <description>-5% to Cooldown</description>
-        <forThingType>WeaponRanged</forThingType>
+        <forThingType>WeaponMelee</forThingType>
         <cost>20</cost>
-        <prerequisite>KIL_WR_Cooldown_2</prerequisite>
+        <prerequisite>KIL_WM_Cooldown_2</prerequisite>
         <statFactors>
-            <RangedWeapon_Cooldown>0.95</RangedWeapon_Cooldown>
+            <MeleeWeapon_CooldownMultiplier>0.95</MeleeWeapon_CooldownMultiplier>
         </statFactors>
     </KeyzItemLeveling.UpgradeDef>
     <KeyzItemLeveling.UpgradeDef>
-        <defName>KIL_WR_Cooldown_4</defName>
+        <defName>KIL_WM_Cooldown_4</defName>
         <label>Cooldown IV</label>
         <description>-5% to Cooldown</description>
-        <forThingType>WeaponRanged</forThingType>
+        <forThingType>WeaponMelee</forThingType>
         <cost>20</cost>
-        <prerequisite>KIL_WR_Cooldown_3</prerequisite>
+        <prerequisite>KIL_WM_Cooldown_3</prerequisite>
         <statFactors>
-            <RangedWeapon_Cooldown>0.95</RangedWeapon_Cooldown>
+            <MeleeWeapon_CooldownMultiplier>0.95</MeleeWeapon_CooldownMultiplier>
         </statFactors>
     </KeyzItemLeveling.UpgradeDef>
     <KeyzItemLeveling.UpgradeDef>
-        <defName>KIL_WR_Cooldown_5</defName>
+        <defName>KIL_WM_Cooldown_5</defName>
         <label>Cooldown V</label>
         <description>-5% to Cooldown</description>
-        <forThingType>WeaponRanged</forThingType>
+        <forThingType>WeaponMelee</forThingType>
         <cost>20</cost>
-        <prerequisite>KIL_WR_Cooldown_4</prerequisite>
+        <prerequisite>KIL_WM_Cooldown_4</prerequisite>
         <statFactors>
-            <RangedWeapon_Cooldown>0.95</RangedWeapon_Cooldown>
+            <MeleeWeapon_CooldownMultiplier>0.95</MeleeWeapon_CooldownMultiplier>
         </statFactors>
     </KeyzItemLeveling.UpgradeDef>
 </Defs>

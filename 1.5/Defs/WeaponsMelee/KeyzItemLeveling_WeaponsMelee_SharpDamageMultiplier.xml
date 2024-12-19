@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_WM_SharpDamage_1</defName>
+        <label>Sharp Damage I</label>
+        <description>+5% to Sharp Damage</description>
+        <forThingType>WeaponMelee</forThingType>
+        <cost>10</cost>
+        <statFactors>
+            <SharpDamageMultiplier>1.05</SharpDamageMultiplier>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_WM_SharpDamage_2</defName>
+        <label>Sharp Damage II</label>
+        <description>+5% to Sharp Damage</description>
+        <forThingType>WeaponMelee</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_WM_SharpDamage_1</prerequisite>
+        <statFactors>
+            <SharpDamageMultiplier>1.05</SharpDamageMultiplier>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_WM_SharpDamage_3</defName>
+        <label>Sharp Damage III</label>
+        <description>+5% to Sharp Damage</description>
+        <forThingType>WeaponMelee</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_WM_SharpDamage_2</prerequisite>
+        <statFactors>
+            <SharpDamageMultiplier>1.05</SharpDamageMultiplier>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_WM_SharpDamage_4</defName>
+        <label>Sharp Damage IV</label>
+        <description>+5% to Sharp Damage</description>
+        <forThingType>WeaponMelee</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_WM_SharpDamage_3</prerequisite>
+        <statFactors>
+            <SharpDamageMultiplier>1.05</SharpDamageMultiplier>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_WM_SharpDamage_5</defName>
+        <label>Sharp Damage V</label>
+        <description>+5% to Sharp Damage</description>
+        <forThingType>WeaponMelee</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_WM_SharpDamage_4</prerequisite>
+        <statFactors>
+            <SharpDamageMultiplier>1.05</SharpDamageMultiplier>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+</Defs>

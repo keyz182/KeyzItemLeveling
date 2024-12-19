@@ -43,32 +43,37 @@ public class UpgradeDialog(CompItemLevelling compItemLevelling, IWindowDrawing c
         RectDivider titleBar = window.NewRow(50f, marginOverride: 0f);
         // Widgets.DrawRectFast(titleBar.Rect.ContractedBy(1f), Color.blue);
 
-        RectDivider contentArea = window.NewRow(inRect.height - 50f, marginOverride: 0f);
-        // Widgets.DrawRectFast(contentArea.Rect.ContractedBy(1f), Color.red);
-
+        RectDivider titleLabel = titleBar.NewCol(660f, marginOverride: 0f);
         GameFont font =  Text.Font;
         Text.Font = GameFont.Medium;
-        Widgets.Label(titleBar.Rect.ContractedBy(10f), $"<size=20%>{compItemLevelling.parent.LabelNoCount} Upgrades</size>");
+        Widgets.Label(titleLabel.Rect.ContractedBy(10f), $"<size=20%>{compItemLevelling.parent.LabelNoCount} Upgrades</size>");
         Text.Font = font;
+        RectDivider CloseButton = titleBar.NewCol(100f, marginOverride: 0f);
+        if (Widgets.ButtonText(CloseButton.Rect.ContractedBy(2f), $"Close"))
+        {
+            Close();
+        }
+        RectDivider contentArea = window.NewRow(inRect.height - 50f, marginOverride: 0f);
+        // Widgets.DrawRectFast(contentArea.Rect.ContractedBy(1f), Color.red);
 
         RectDivider detailPane = contentArea.NewCol(200f, marginOverride: 0f);
         // Widgets.DrawRectFast(detailPane.Rect.ContractedBy(1f), Color.yellow);
 
         RectDivider upgradeLabel = detailPane.NewRow(50f, marginOverride: 0f);
         // Widgets.DrawRectFast(upgradeLabel.Rect.ContractedBy(1f), Color.green);
-        Widgets.Label(upgradeLabel.Rect.ContractedBy(5f), selectedUpgrade == null ? "Select an upgrade ->" : selectedUpgrade.LabelCap.ToString());
+        Widgets.Label(upgradeLabel.Rect.ContractedBy(5f), selectedUpgrade == null ? "KIL_UpgradeDialog_LabelEmpty".Translate().ToString() : selectedUpgrade.LabelCap.ToString());
 
-        RectDivider upgradeDescription = detailPane.NewRow(414f-36f, marginOverride: 0f);
+        RectDivider upgradeDescription = detailPane.NewRow(414f-60f, marginOverride: 0f);
         // Widgets.DrawRectFast(upgradeDescription.Rect.ContractedBy(1f), Color.white);
-        Widgets.Label(upgradeDescription.Rect.ContractedBy(5f),  selectedUpgrade == null ? "" : selectedUpgrade.description);
+        Widgets.Label(upgradeDescription.Rect.ContractedBy(5f),  selectedUpgrade == null ? "" : "KIL_UpgradeDialog_Description".Translate(compItemLevelling.AdjustedCost(selectedUpgrade).ToString(), selectedUpgrade.description).ToString() );
 
-        RectDivider xpLabel = detailPane.NewRow(36f, marginOverride: 0f);
-        Widgets.Label(xpLabel.Rect.ContractedBy(5f), "Current Experience: " + compItemLevelling.Experience);
+        RectDivider xpLabel = detailPane.NewRow(60f, marginOverride: 0f);
+        Widgets.Label(xpLabel.Rect.ContractedBy(5f), "KIL_UpgradeDialog_Experience".Translate(compItemLevelling.Experience) );
         RectDivider acceptBtn = detailPane.NewRow(50f, marginOverride: 0f);
         // Widgets.DrawRectFast(acceptBtn.Rect.ContractedBy(1f), Color.magenta);
-        var btnRect = acceptBtn.Rect.ContractedBy(5f);
+        Rect btnRect = acceptBtn.Rect.ContractedBy(5f);
         btnRect.yMin += 10;
-        if (Widgets.ButtonText(btnRect, "Accept"))
+        if (Widgets.ButtonText(btnRect, "KIL_UpgradeDialog_Apply".Translate()))
         {
             if (!compItemLevelling.TryApplyUpgrade(selectedUpgrade))
             {
@@ -137,10 +142,15 @@ public class UpgradeDialog(CompItemLevelling compItemLevelling, IWindowDrawing c
                             researchColor = TexUI.FinishedResearchColor;
                         }
 
+                        if (!compItemLevelling.IsUpgradeValid(node.def))
+                        {
+                            researchColor = TexUI.LockedResearchColor;
+                        }
+
                         if (Widgets.CustomButtonText(ref rowBtn, "", researchColor, labelColor, borderColor, Widgets.WindowBGFillColor, borderSize: borderSize))
                         {
                             SoundDefOf.Click.PlayOneShotOnCamera();
-                            selectedUpgrade = graphRoot.def;
+                            selectedUpgrade = node.def;
                         }
                         int anchor = (int) Text.Anchor;
                         Color origTextCol = GUI.color;

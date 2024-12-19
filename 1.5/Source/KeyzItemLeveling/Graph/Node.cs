@@ -36,7 +36,7 @@ public class Node
     {
         get
         {
-            int maxWidth = 0;
+            int maxWidth = 1;
 
             List<Node> row = Children.ToList();
 

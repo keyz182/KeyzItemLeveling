@@ -12,6 +12,10 @@ public class UpgradeDef: Def
     public int cost;
     public string iconPath;
 
+    public bool allowRenaming = false;
+
+    public int order = 9999;
+
     public List<StatModifier> statOffsets;
     public List<StatModifier> statFactors;
 

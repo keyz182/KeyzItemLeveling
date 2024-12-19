@@ -24,6 +24,8 @@ public class Settings : ModSettings
         ExperiencePerDamageReceived = options.SliderLabeled("KeyzItemLeveling_Settings_ExperiencePerDamageReceived".Translate(ExperiencePerDamageReceived.ToString("0.000")), ExperiencePerDamageReceived, 0.001f, 0.1f);
         options.Gap();
 
+
+
         options.End();
     }
 

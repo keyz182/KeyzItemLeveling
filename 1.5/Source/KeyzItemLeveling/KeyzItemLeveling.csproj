@@ -71,12 +71,102 @@
     <CompatibilityFiles Include="../../../Compatibility/**" />
     <ExtraFiles Include="../../../LICENSE" />
     <ExtraFiles Include="../../../README.md" />
-    <ReleaseFiles Update="..\..\Defs\KeyzItemLeveling_WeaponsRanged_Cooldown.xml">
-      <Link>KeyzItemLeveling\1.5\Defs\KeyzItemLeveling_WeaponsRanged_Cooldown.xml</Link>
+    <ReleaseFiles Update="..\..\Defs\WeaponsRanged\KeyzItemLeveling_WeaponsRanged_Accuracy.xml">
+      <Link>KeyzItemLeveling\1.5\Defs\WeaponsRanged\KeyzItemLeveling_WeaponsRanged_Accuracy.xml</Link>
     </ReleaseFiles>
-    <ReleaseFiles Update="..\..\Defs\KeyzItemLeveling_WeaponsRanged_DamageMultiplier.xml">
-      <Link>KeyzItemLeveling\1.5\Defs\KeyzItemLeveling_WeaponsRanged_DamageMultiplier.xml</Link>
+    <ReleaseFiles Update="..\..\Defs\WeaponsRanged\KeyzItemLeveling_WeaponsRanged_Cooldown.xml">
+      <Link>KeyzItemLeveling\1.5\Defs\WeaponsRanged\KeyzItemLeveling_WeaponsRanged_Cooldown.xml</Link>
     </ReleaseFiles>
+    <ReleaseFiles Update="..\..\Defs\WeaponsRanged\KeyzItemLeveling_WeaponsRanged_DamageMultiplier.xml">
+      <Link>KeyzItemLeveling\1.5\Defs\WeaponsRanged\KeyzItemLeveling_WeaponsRanged_DamageMultiplier.xml</Link>
+    </ReleaseFiles>
+    <ReleaseFiles Update="..\..\Defs\WeaponsRanged\KeyzItemLeveling_WeaponsRanged_Rename.xml">
+      <Link>KeyzItemLeveling\1.5\Defs\WeaponsRanged\KeyzItemLeveling_WeaponsRanged_Rename.xml</Link>
+    </ReleaseFiles>
+    <ReleaseFiles Update="..\..\Defs\WeaponsMelee\KeyzItemLeveling_WeaponsRanged_Cooldown.xml">
+      <Link>KeyzItemLeveling\1.5\Defs\WeaponsMelee\KeyzItemLeveling_WeaponsRanged_Cooldown.xml</Link>
+    </ReleaseFiles>
+    <ReleaseFiles Update="..\..\Defs\WeaponsMelee\KeyzItemLeveling_WeaponsRanged_DamageMultiplier.xml">
+      <Link>KeyzItemLeveling\1.5\Defs\WeaponsMelee\KeyzItemLeveling_WeaponsRanged_DamageMultiplier.xml</Link>
+    </ReleaseFiles>
+    <ReleaseFiles Update="..\..\Defs\WeaponsMelee\KeyzItemLeveling_WeaponsRanged_Rename.xml">
+      <Link>KeyzItemLeveling\1.5\Defs\WeaponsMelee\KeyzItemLeveling_WeaponsRanged_Rename.xml</Link>
+    </ReleaseFiles>
+    <ReleaseFiles Update="..\..\Defs\WeaponsMelee\KeyzItemLeveling_WeaponsMelee_DamageMultiplier.xml">
+      <Link>KeyzItemLeveling\1.5\Defs\WeaponsMelee\KeyzItemLeveling_WeaponsMelee_DamageMultiplier.xml</Link>
+    </ReleaseFiles>
+    <ReleaseFiles Remove="KeyzItemLeveling\1.5\Defs\WeaponsMelee\**" />
+    <ReleaseFiles Remove="KeyzItemLeveling\1.5\Defs\WeaponsRanged\**" />
+    <ReleaseFiles Update="..\..\Defs\WeaponsMelee\KeyzItemLeveling_WeaponsMelee_BluntDamageMultiplier.xml">
+      <Link>KeyzItemLeveling\1.5\Defs\WeaponsMelee\KeyzItemLeveling_WeaponsMelee_BluntDamageMultiplier.xml</Link>
+    </ReleaseFiles>
+    <ReleaseFiles Update="..\..\Defs\WeaponsMelee\KeyzItemLeveling_WeaponsMelee_Cooldown.xml">
+      <Link>KeyzItemLeveling\1.5\Defs\WeaponsMelee\KeyzItemLeveling_WeaponsMelee_Cooldown.xml</Link>
+    </ReleaseFiles>
+    <ReleaseFiles Update="..\..\Defs\WeaponsMelee\KeyzItemLeveling_WeaponsMelee_Rename.xml">
+      <Link>KeyzItemLeveling\1.5\Defs\WeaponsMelee\KeyzItemLeveling_WeaponsMelee_Rename.xml</Link>
+    </ReleaseFiles>
+    <ReleaseFiles Update="..\..\Defs\WeaponsMelee\KeyzItemLeveling_WeaponsMelee_SharpDamageMultiplier.xml">
+      <Link>KeyzItemLeveling\1.5\Defs\WeaponsMelee\KeyzItemLeveling_WeaponsMelee_SharpDamageMultiplier.xml</Link>
+    </ReleaseFiles>
+    <ReleaseFiles Remove="KeyzItemLeveling\1.5\Defs\**" />
+    <ReleaseFiles Update="..\..\Defs\Apparel\KeyzItemLeveling_Apparel_ArmourBlunt.xml">
+      <Link>KeyzItemLeveling\1.5\Defs\Apparel\KeyzItemLeveling_Apparel_ArmourBlunt.xml</Link>
+    </ReleaseFiles>
+    <ReleaseFiles Update="..\..\Defs\Apparel\KeyzItemLeveling_Apparel_ArmourHeat.xml">
+      <Link>KeyzItemLeveling\1.5\Defs\Apparel\KeyzItemLeveling_Apparel_ArmourHeat.xml</Link>
+    </ReleaseFiles>
+    <ReleaseFiles Update="..\..\Defs\Apparel\KeyzItemLeveling_Apparel_ArmourSharp.xml">
+      <Link>KeyzItemLeveling\1.5\Defs\Apparel\KeyzItemLeveling_Apparel_ArmourSharp.xml</Link>
+    </ReleaseFiles>
+    <ReleaseFiles Update="..\..\Defs\Apparel\KeyzItemLeveling_Apparel_InsulationCold.xml">
+      <Link>KeyzItemLeveling\1.5\Defs\Apparel\KeyzItemLeveling_Apparel_InsulationCold.xml</Link>
+    </ReleaseFiles>
+    <ReleaseFiles Update="..\..\Defs\Apparel\KeyzItemLeveling_Apparel_InsulationHeat.xml">
+      <Link>KeyzItemLeveling\1.5\Defs\Apparel\KeyzItemLeveling_Apparel_InsulationHeat.xml</Link>
+    </ReleaseFiles>
+    <ReleaseFiles Update="..\..\Defs\Apparel\KeyzItemLeveling_Apparel_Rename.xml">
+      <Link>KeyzItemLeveling\1.5\Defs\Apparel\KeyzItemLeveling_Apparel_Rename.xml</Link>
+    </ReleaseFiles>
+    <ReleaseFiles Update="..\..\Defs\WeaponsMelee\KeyzItemLeveling_WeaponsMelee_BluntDamageMultiplier.xml">
+      <Link>KeyzItemLeveling\1.5\Defs\WeaponsMelee\KeyzItemLeveling_WeaponsMelee_BluntDamageMultiplier.xml</Link>
+    </ReleaseFiles>
+    <ReleaseFiles Update="..\..\Defs\WeaponsMelee\KeyzItemLeveling_WeaponsMelee_Cooldown.xml">
+      <Link>KeyzItemLeveling\1.5\Defs\WeaponsMelee\KeyzItemLeveling_WeaponsMelee_Cooldown.xml</Link>
+    </ReleaseFiles>
+    <ReleaseFiles Update="..\..\Defs\WeaponsMelee\KeyzItemLeveling_WeaponsMelee_Rename.xml">
+      <Link>KeyzItemLeveling\1.5\Defs\WeaponsMelee\KeyzItemLeveling_WeaponsMelee_Rename.xml</Link>
+    </ReleaseFiles>
+    <ReleaseFiles Update="..\..\Defs\WeaponsMelee\KeyzItemLeveling_WeaponsMelee_SharpDamageMultiplier.xml">
+      <Link>KeyzItemLeveling\1.5\Defs\WeaponsMelee\KeyzItemLeveling_WeaponsMelee_SharpDamageMultiplier.xml</Link>
+    </ReleaseFiles>
+    <ReleaseFiles Update="..\..\Defs\WeaponsRanged\KeyzItemLeveling_WeaponsRanged_Accuracy.xml">
+      <Link>KeyzItemLeveling\1.5\Defs\WeaponsRanged\KeyzItemLeveling_WeaponsRanged_Accuracy.xml</Link>
+    </ReleaseFiles>
+    <ReleaseFiles Update="..\..\Defs\WeaponsRanged\KeyzItemLeveling_WeaponsRanged_Cooldown.xml">
+      <Link>KeyzItemLeveling\1.5\Defs\WeaponsRanged\KeyzItemLeveling_WeaponsRanged_Cooldown.xml</Link>
+    </ReleaseFiles>
+    <ReleaseFiles Update="..\..\Defs\WeaponsRanged\KeyzItemLeveling_WeaponsRanged_DamageMultiplier.xml">
+      <Link>KeyzItemLeveling\1.5\Defs\WeaponsRanged\KeyzItemLeveling_WeaponsRanged_DamageMultiplier.xml</Link>
+    </ReleaseFiles>
+    <ReleaseFiles Update="..\..\Defs\WeaponsRanged\KeyzItemLeveling_WeaponsRanged_Rename.xml">
+      <Link>KeyzItemLeveling\1.5\Defs\WeaponsRanged\KeyzItemLeveling_WeaponsRanged_Rename.xml</Link>
+    </ReleaseFiles>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="KeyzItemLeveling\1.5\Defs\WeaponsMelee\**" />
+    <Compile Remove="KeyzItemLeveling\1.5\Defs\WeaponsRanged\**" />
+    <Compile Remove="KeyzItemLeveling\1.5\Defs\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="KeyzItemLeveling\1.5\Defs\WeaponsMelee\**" />
+    <EmbeddedResource Remove="KeyzItemLeveling\1.5\Defs\WeaponsRanged\**" />
+    <EmbeddedResource Remove="KeyzItemLeveling\1.5\Defs\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="KeyzItemLeveling\1.5\Defs\WeaponsMelee\**" />
+    <None Remove="KeyzItemLeveling\1.5\Defs\WeaponsRanged\**" />
+    <None Remove="KeyzItemLeveling\1.5\Defs\**" />
   </ItemGroup>
 
 </Project>
