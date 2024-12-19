@@ -3,55 +3,55 @@
     <KeyzItemLeveling.UpgradeDef>
         <defName>KIL_WM_BluntDamage_1</defName>
         <label>Blunt Damage I</label>
-        <description>+5% to Blunt Damage</description>
+        <description>+10% to Blunt Damage</description>
         <forThingType>WeaponMelee</forThingType>
         <cost>10</cost>
         <statFactors>
-            <BluntDamageMultiplier>1.05</BluntDamageMultiplier>
+            <BluntDamageMultiplier>1.1</BluntDamageMultiplier>
         </statFactors>
     </KeyzItemLeveling.UpgradeDef>
     <KeyzItemLeveling.UpgradeDef>
         <defName>KIL_WM_BluntDamage_2</defName>
         <label>BluntDamage II</label>
-        <description>+5% to BluntDamage</description>
+        <description>+10% to BluntDamage</description>
         <forThingType>WeaponMelee</forThingType>
         <cost>20</cost>
         <prerequisite>KIL_WM_BluntDamage_1</prerequisite>
         <statFactors>
-            <BluntDamageMultiplier>1.05</BluntDamageMultiplier>
+            <BluntDamageMultiplier>1.1</BluntDamageMultiplier>
         </statFactors>
     </KeyzItemLeveling.UpgradeDef>
     <KeyzItemLeveling.UpgradeDef>
         <defName>KIL_WM_BluntDamage_3</defName>
         <label>BluntDamage III</label>
-        <description>+5% to BluntDamage</description>
+        <description>+10% to BluntDamage</description>
         <forThingType>WeaponMelee</forThingType>
         <cost>20</cost>
         <prerequisite>KIL_WM_BluntDamage_2</prerequisite>
         <statFactors>
-            <BluntDamageMultiplier>1.05</BluntDamageMultiplier>
+            <BluntDamageMultiplier>1.1</BluntDamageMultiplier>
         </statFactors>
     </KeyzItemLeveling.UpgradeDef>
     <KeyzItemLeveling.UpgradeDef>
         <defName>KIL_WM_BluntDamage_4</defName>
         <label>BluntDamage IV</label>
-        <description>+5% to BluntDamage</description>
+        <description>+10% to BluntDamage</description>
         <forThingType>WeaponMelee</forThingType>
         <cost>20</cost>
         <prerequisite>KIL_WM_BluntDamage_3</prerequisite>
         <statFactors>
-            <BluntDamageMultiplier>1.05</BluntDamageMultiplier>
+            <BluntDamageMultiplier>1.1</BluntDamageMultiplier>
         </statFactors>
     </KeyzItemLeveling.UpgradeDef>
     <KeyzItemLeveling.UpgradeDef>
         <defName>KIL_WM_BluntDamage_5</defName>
         <label>BluntDamage V</label>
-        <description>+5% to BluntDamage</description>
+        <description>+10% to BluntDamage</description>
         <forThingType>WeaponMelee</forThingType>
         <cost>20</cost>
         <prerequisite>KIL_WM_BluntDamage_4</prerequisite>
         <statFactors>
-            <BluntDamageMultiplier>1.05</BluntDamageMultiplier>
+            <BluntDamageMultiplier>1.1</BluntDamageMultiplier>
         </statFactors>
     </KeyzItemLeveling.UpgradeDef>
 </Defs>
