@@ -119,12 +119,6 @@
     <ReleaseFiles Update="..\..\Defs\Apparel\KeyzItemLeveling_Apparel_ArmourSharp.xml">
       <Link>KeyzItemLeveling\1.5\Defs\Apparel\KeyzItemLeveling_Apparel_ArmourSharp.xml</Link>
     </ReleaseFiles>
-    <ReleaseFiles Update="..\..\Defs\Apparel\KeyzItemLeveling_Apparel_InsulationCold.xml">
-      <Link>KeyzItemLeveling\1.5\Defs\Apparel\KeyzItemLeveling_Apparel_InsulationCold.xml</Link>
-    </ReleaseFiles>
-    <ReleaseFiles Update="..\..\Defs\Apparel\KeyzItemLeveling_Apparel_InsulationHeat.xml">
-      <Link>KeyzItemLeveling\1.5\Defs\Apparel\KeyzItemLeveling_Apparel_InsulationHeat.xml</Link>
-    </ReleaseFiles>
     <ReleaseFiles Update="..\..\Defs\Apparel\KeyzItemLeveling_Apparel_Rename.xml">
       <Link>KeyzItemLeveling\1.5\Defs\Apparel\KeyzItemLeveling_Apparel_Rename.xml</Link>
     </ReleaseFiles>
@@ -152,6 +146,9 @@
     <ReleaseFiles Update="..\..\Defs\WeaponsRanged\KeyzItemLeveling_WeaponsRanged_Rename.xml">
       <Link>KeyzItemLeveling\1.5\Defs\WeaponsRanged\KeyzItemLeveling_WeaponsRanged_Rename.xml</Link>
     </ReleaseFiles>
+    <ReleaseFiles Update="..\..\Patches\KeyzItemLeveling_StatParts.xml">
+      <Link>KeyzItemLeveling\1.5\Patches\KeyzItemLeveling_StatParts.xml</Link>
+    </ReleaseFiles>
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="KeyzItemLeveling\1.5\Defs\WeaponsMelee\**" />
@@ -167,6 +164,11 @@
     <None Remove="KeyzItemLeveling\1.5\Defs\WeaponsMelee\**" />
     <None Remove="KeyzItemLeveling\1.5\Defs\WeaponsRanged\**" />
     <None Remove="KeyzItemLeveling\1.5\Defs\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="..\..\..\Compatibility\">
+      <Link>KeyzItemLeveling\Compatibility</Link>
+    </Folder>
   </ItemGroup>
 
 </Project>

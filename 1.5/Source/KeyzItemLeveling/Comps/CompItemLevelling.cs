@@ -162,7 +162,7 @@ public class CompItemLevelling : ThingComp
     {
     }
 
-    public override float GetStatFactor(StatDef stat)
+    public virtual float GetFactorForStat(StatDef stat)
     {
         if(statFactorCache.TryGetValue(stat, out float factor)) return factor;
 
@@ -178,7 +178,7 @@ public class CompItemLevelling : ThingComp
         return statFactor;
     }
 
-    public override float GetStatOffset(StatDef stat)
+    public virtual float GetOffsetForStat(StatDef stat)
     {
         if(statOffsetCache.TryGetValue(stat, out float offset)) return offset;
 
@@ -188,8 +188,9 @@ public class CompItemLevelling : ThingComp
         return offset;
     }
 
-    public override void GetStatsExplanation(StatDef stat, StringBuilder sb)
+    public virtual string GetExplanationForStat(StatDef stat)
     {
+        StringBuilder sb = new StringBuilder();
         foreach (UpgradeDef upgradeDef in upgrades.Where(upgrade=>!upgrade.statFactors.NullOrEmpty() && upgrade.statFactors.Any(factor=>factor.stat == stat)))
         {
             sb.AppendLine($"{upgradeDef.LabelCap} {upgradeDef.statFactors.First(factor => factor.stat == stat).ToStringAsFactor}");
@@ -199,5 +200,7 @@ public class CompItemLevelling : ThingComp
         {
             sb.AppendLine($"{upgradeDef.LabelCap} {upgradeDef.statOffsets.First(offset => offset.stat == stat).ValueToStringAsOffset}");
         }
+
+        return sb.ToString();
     }
 }

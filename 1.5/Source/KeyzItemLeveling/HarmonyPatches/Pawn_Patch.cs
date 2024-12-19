@@ -55,11 +55,12 @@ public static class Pawn_Patch
         if (Prefs.DevMode && DebugSettings.godMode)
         {
             Command_Action resetBtn = new Command_Action();
-            resetBtn.defaultLabel = "Reset XP";
+            resetBtn.defaultLabel = "Reset Upgrades and XP";
+            resetBtn.defaultDesc = "Reset all upgrades and sets XP 0";
             resetBtn.icon = Reset;
             resetBtn.action = delegate()
             {
-                List<FloatMenuOption> list = allComps.Select(comp => new FloatMenuOption(comp.parent.LabelCap, delegate { comp.experience = 0; }, comp.parent, Color.white, MenuOptionPriority.Default, null, null, 0f, null, null)).ToList();
+                List<FloatMenuOption> list = allComps.Select(comp => new FloatMenuOption(comp.parent.LabelCap, delegate { comp.experience = 0; comp.upgrades.Clear();}, comp.parent, Color.white, MenuOptionPriority.Default, null, null, 0f, null, null)).ToList();
                 Find.WindowStack.Add(new FloatMenu(list));
             };
 
