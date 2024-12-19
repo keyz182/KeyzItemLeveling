@@ -2,6 +2,7 @@
 using System.Linq;
 using HarmonyLib;
 using KeyzItemLeveling.Comps;
+using RimWorld;
 using UnityEngine;
 using Verse;
 
@@ -90,5 +91,25 @@ public static class Pawn_Patch
         }
 
         __result = __result.Concat(gizmos);
+    }
+
+    [HarmonyPatch(nameof(Pawn.Kill))]
+    [HarmonyPostfix]
+    public static void Pawn_Kill(Pawn __instance, DamageInfo? dinfo, Hediff exactCulprit)
+    {
+        if(!dinfo.HasValue) return;
+
+        if(dinfo.Value.Instigator == null || dinfo.Value.Weapon == null) return;
+
+        if(dinfo.Value.Instigator is not Pawn pawn) return;
+
+        if (pawn.equipment.Primary.def == dinfo.Value.Weapon)
+        {
+            pawn.equipment.Primary.TryGetComp<CompItemLevelling>()?.Notify_KilledPawn(__instance);
+        }else if (pawn.equipment.AllEquipmentListForReading.Any(eq => eq.def == dinfo.Value.Weapon))
+        {
+            pawn.equipment.AllEquipmentListForReading.FirstOrDefault(eq=>eq.def == dinfo.Value.Weapon)?.TryGetComp<CompItemLevelling>()?.Notify_KilledPawn(__instance);
+        }
+
     }
 }

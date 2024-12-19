@@ -3,6 +3,7 @@
     <KeyzItemLeveling_SettingsCategory>KeyzItemLeveling</KeyzItemLeveling_SettingsCategory>
     <KeyzItemLeveling_Settings_ExperiencePerHourEquipped>Experience per hour equipped: [{0}]</KeyzItemLeveling_Settings_ExperiencePerHourEquipped>
     <KeyzItemLeveling_Settings_ExperiencePerUse>Experience per use: [{0}]</KeyzItemLeveling_Settings_ExperiencePerUse>
+    <KeyzItemLeveling_Settings_ExperiencePerKill>Experience per kill: [{0}]</KeyzItemLeveling_Settings_ExperiencePerKill>
     <KeyzItemLeveling_Settings_ExperiencePerDamageReceived>Experience per damage received: [{0}]</KeyzItemLeveling_Settings_ExperiencePerDamageReceived>
     <KIL_CompItemLevelling_CompInspectStringExtra>Current Experience: {0}\nCurrent Level: {1}</KIL_CompItemLevelling_CompInspectStringExtra>
     <KIL_UpgradeDialog_LabelEmpty>Select an Upgrade -></KIL_UpgradeDialog_LabelEmpty>

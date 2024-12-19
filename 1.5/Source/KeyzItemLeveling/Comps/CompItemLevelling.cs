@@ -138,11 +138,6 @@ public class CompItemLevelling : ThingComp
         ApplyEquippedExperience(true);
     }
 
-    public override void Notify_UsedVerb(Pawn pawn, Verb verb)
-    {
-        experience += KeyzItemLevelingMod.settings.ExperiencePerUse;
-    }
-
     public override void Notify_UsedWeapon(Pawn pawn)
     {
         experience += KeyzItemLevelingMod.settings.ExperiencePerUse;
@@ -156,6 +151,7 @@ public class CompItemLevelling : ThingComp
     public override void Notify_KilledPawn(Pawn pawn)
     {
         ModLog.Log($"{parent.LabelCap} Notify_KilledPawn {pawn.LabelCap}");
+        experience += KeyzItemLevelingMod.settings.ExperiencePerKill;
     }
 
     public override void Notify_WearerDied()
