@@ -32,33 +32,47 @@
         </value>
     </Operation>
 
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/StatDef[defName = "MeleeWeapon_CooldownMultiplier"]/parts</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/StatDef[defName="MeleeWeapon_CooldownMultiplier"]</xpath>
+            <value>
+                <parts/>
+            </value>
+        </nomatch>
+    </Operation>
     <Operation Class="PatchOperationAdd">
-        <xpath>Defs/StatDef[defName="MeleeWeapon_CooldownMultiplier"]</xpath>
+        <xpath>Defs/StatDef[defName="MeleeWeapon_CooldownMultiplier"]/parts</xpath>
         <value>
-            <parts>
-                <li Class="KeyzItemLeveling.StatPart_Upgrade" />
-            </parts>
+            <li Class="KeyzItemLeveling.StatPart_Upgrade" />
         </value>
     </Operation>
 
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/StatDef[defName = "SharpDamageMultiplier"]/parts</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/StatDef[defName="SharpDamageMultiplier"]</xpath>
+            <value>
+                <parts/>
+            </value>
+        </nomatch>
+    </Operation>
     <Operation Class="PatchOperationAdd">
-        <xpath>Defs/StatDef[defName="SharpDamageMultiplier"]</xpath>
+        <xpath>Defs/StatDef[defName="SharpDamageMultiplier"]/parts</xpath>
         <value>
-            <parts>
-                <li Class="KeyzItemLeveling.StatPart_Upgrade" />
-            </parts>
+            <li Class="KeyzItemLeveling.StatPart_Upgrade" />
         </value>
     </Operation>
 
-    <Operation Class="PatchOperationAdd">
-        <xpath>Defs/StatDef[defName="BluntDamageMultiplier"]</xpath>
-        <value>
-            <parts>
-                <li Class="KeyzItemLeveling.StatPart_Upgrade" />
-            </parts>
-        </value>
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/StatDef[defName = "BluntDamageMultiplier"]/parts</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/StatDef[defName="BluntDamageMultiplier"]</xpath>
+            <value>
+                <parts/>
+            </value>
+        </nomatch>
     </Operation>
-
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/StatDef[defName="BluntDamageMultiplier"]/parts</xpath>
         <value>
@@ -82,21 +96,26 @@
         </value>
     </Operation>
 
-
-
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/StatDef[defName="RangedWeapon_Cooldown"]/parts</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/StatDef[defName="RangedWeapon_Cooldown"]</xpath>
+            <value>
+                <parts/>
+            </value>
+        </nomatch>
+    </Operation>
     <Operation Class="PatchOperationAdd">
-        <xpath>Defs/StatDef[defName="RangedWeapon_Cooldown"]</xpath>
+        <xpath>Defs/StatDef[defName="RangedWeapon_Cooldown"]/parts</xpath>
         <value>
-            <parts>
-                <li Class="KeyzItemLeveling.StatPart_Upgrade" />
-            </parts>
+            <li Class="KeyzItemLeveling.StatPart_Upgrade" />
         </value>
     </Operation>
 
     <Operation Class="PatchOperationConditional">
         <xpath>Defs/StatDef[defName="RangedWeapon_DamageMultiplier"]/parts</xpath>
         <nomatch Class="PatchOperationAdd">
-            <xpath>Defs/ThingDef[defName="RangedWeapon_DamageMultiplier"]</xpath>
+            <xpath>Defs/StatDef[defName="RangedWeapon_DamageMultiplier"]</xpath>
             <value>
                 <parts />
             </value>
