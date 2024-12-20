@@ -164,6 +164,8 @@ public class CompItemLevelling : ThingComp
 
         float statFactor = 1f;
 
+        if(upgrades.NullOrEmpty()) return statFactor;
+
         foreach (StatModifier mod in upgrades.Where(upg=>!upg.statFactors.NullOrEmpty()).SelectMany(upgrade=>upgrade.statFactors.Where(statMod => statMod.stat == stat)))
         {
             statFactor *= mod.value;
@@ -177,6 +179,7 @@ public class CompItemLevelling : ThingComp
     public virtual float GetOffsetForStat(StatDef stat)
     {
         if(statOffsetCache.TryGetValue(stat, out float offset)) return offset;
+        if(upgrades.NullOrEmpty()) return 0f;
 
         offset = upgrades.Where(upg=>!upg.statOffsets.NullOrEmpty()).SelectMany(upgrade=>upgrade.statOffsets.Where(statMod => statMod.stat == stat)).Sum((statMod) => statMod.value);
         statOffsetCache[stat] = offset;
