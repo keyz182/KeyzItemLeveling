@@ -18,13 +18,13 @@ public class CompItemLevelling : ThingComp
     public Dictionary<StatDef, float> statFactorCache = new Dictionary<StatDef, float>();
     public Dictionary<StatDef, float> statOffsetCache = new Dictionary<StatDef, float>();
 
-    public int Level => upgrades.Count;
+    public int Level => upgrades.NullOrEmpty() ? 0 : upgrades.Count;
 
     public CompProperties_ItemLevelling Props => (CompProperties_ItemLevelling)props;
 
     public string NewName = null;
 
-    public bool AllowRenaming => upgrades.Any(upg => upg.allowRenaming);
+    public bool AllowRenaming => !upgrades.NullOrEmpty() && upgrades.Any(upg => upg.allowRenaming);
 
     public override void PostExposeData()
     {
@@ -33,6 +33,10 @@ public class CompItemLevelling : ThingComp
         Scribe_Values.Look(ref experience, "experience", 0);
         Scribe_Values.Look(ref tickEquipped, "tickEquipped", -1);
         Scribe_Values.Look(ref NewName, "NewName", null);
+        if (Scribe.mode == LoadSaveMode.PostLoadInit && upgrades == null)
+        {
+            upgrades = new HashSet<UpgradeDef>();
+        }
     }
 
 
