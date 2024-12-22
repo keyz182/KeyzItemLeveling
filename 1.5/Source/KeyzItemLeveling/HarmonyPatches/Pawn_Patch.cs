@@ -22,6 +22,8 @@ public static class Pawn_Patch
     [HarmonyPostfix]
     public static void GetGizmos(Pawn __instance, ref IEnumerable<Gizmo> __result)
     {
+        if(__instance.Faction is not { IsPlayer: true } || __instance.NonHumanlikeOrWildMan()) return;
+
         IEnumerable<CompItemLevelling> apparelGizmos = __instance.apparel.WornApparel.SelectMany(apparel => apparel.AllComps).OfType<CompItemLevelling>();
         List<CompItemLevelling> allComps = __instance.equipment.AllEquipmentListForReading.SelectMany(thing => thing.AllComps).OfType<CompItemLevelling>().Concat(apparelGizmos).ToList();
 
