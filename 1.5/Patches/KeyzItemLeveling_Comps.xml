@@ -37,6 +37,24 @@
     </Operation>
 
     <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[@Name="BaseWeaponNeolithic"]/comps</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[@Name="BaseWeaponNeolithic"]</xpath>
+            <value>
+                <comps />
+            </value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[@Name="BaseWeaponNeolithic"]/comps</xpath>
+        <value>
+            <li Class="KeyzItemLeveling.Comps.CompProperties_ItemLevelling">
+                <thingType>WeaponRanged</thingType>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
         <xpath>Defs/ThingDef[@Name="ArmorMachineableBase"]/comps</xpath>
         <nomatch Class="PatchOperationAdd">
             <xpath>Defs/ThingDef[@Name="ArmorMachineableBase"]</xpath>
