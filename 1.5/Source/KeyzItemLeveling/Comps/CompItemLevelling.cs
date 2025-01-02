@@ -18,13 +18,13 @@ public class CompItemLevelling : ThingComp
     public Dictionary<StatDef, float> statFactorCache = new Dictionary<StatDef, float>();
     public Dictionary<StatDef, float> statOffsetCache = new Dictionary<StatDef, float>();
 
-    public int Level => upgrades.NullOrEmpty() ? 0 : upgrades.Count;
+    public virtual int Level => upgrades.NullOrEmpty() ? 0 : upgrades.Count;
 
     public CompProperties_ItemLevelling Props => (CompProperties_ItemLevelling)props;
 
     public string NewName = null;
 
-    public bool AllowRenaming => !upgrades.NullOrEmpty() && upgrades.Any(upg => upg.allowRenaming);
+    public virtual bool AllowRenaming => !upgrades.NullOrEmpty() && upgrades.Any(upg => upg.allowRenaming);
 
     public override void PostExposeData()
     {
@@ -66,18 +66,27 @@ public class CompItemLevelling : ThingComp
         return sb.ToString();
     }
 
-    public bool IsUpgradeValid(UpgradeDef upgrade)
+    public virtual bool IsUpgradeValid(UpgradeDef upgrade)
     {
-        return Props.thingType == upgrade.forThingType && (upgrade.prerequisite == null || upgrades.Any(def => def == upgrade.prerequisite)) && upgrade.Worker.CanApply(this) && experience > AdjustedCost(upgrade);
+        return Props.thingType == upgrade.forThingType
+               && (upgrade.prerequisite == null || upgrades.Any(def => def == upgrade.prerequisite))
+               && upgrade.Worker.CanApply(this)
+               && experience > AdjustedCost(upgrade);
     }
 
-    public bool TryApplyUpgrade(UpgradeDef upgrade)
+    public virtual bool TryApplyUpgrade(UpgradeDef upgrade)
     {
         if (!IsUpgradeValid(upgrade)) return false;
+        experience -= AdjustedCost(upgrade);
         upgrade.Worker.Apply(this);
         statFactorCache.Clear();
         statOffsetCache.Clear();
-        experience -= AdjustedCost(upgrade);
+
+        foreach (StatDef statDef in DefDatabase<StatDef>.AllDefs)
+        {
+            statDef.Worker.TryClearCache();
+        }
+
         return true;
     }
 

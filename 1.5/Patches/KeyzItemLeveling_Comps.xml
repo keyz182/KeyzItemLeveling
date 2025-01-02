@@ -18,6 +18,7 @@
         </value>
     </Operation>
 
+
     <Operation Class="PatchOperationConditional">
         <xpath>Defs/ThingDef[@Name="BaseGun"]/comps</xpath>
         <nomatch Class="PatchOperationAdd">

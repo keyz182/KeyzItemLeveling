@@ -10,8 +10,11 @@
         <li>ludeon.rimworld.anomaly</li>
         <li>keyz.keyzitemleveling</li>
         <li>nightmare.jaxe.publisherplusmultiversionfork</li>
-        <li>sandy.rpgstyleinventory.avilmask.revamped</li>
+        <!-- <li>sandy.rpgstyleinventory.avilmask.revamped</li> -->
         <li>jaxe.rimhud</li>
+        <!-- <li>owlchemist.tacticowl</li> -->
+        <li>oskarpotocki.vanillafactionsexpanded.core</li>
+        <!-- <li>pphhyy.urmc</li> -->
     </activeMods>
     <knownExpansions>
         <li>ludeon.rimworld</li>
