@@ -105,7 +105,9 @@ public static class Pawn_Patch
 
         if(dinfo.Value.Instigator is not Pawn pawn) return;
 
-        if (pawn.equipment.Primary.def == dinfo.Value.Weapon)
+        if(pawn.equipment == null) return;
+
+        if (pawn.equipment.Primary?.def == dinfo.Value.Weapon)
         {
             pawn.equipment.Primary.TryGetComp<CompItemLevelling>()?.Notify_KilledPawn(__instance);
         }else if (pawn.equipment.AllEquipmentListForReading.Any(eq => eq.def == dinfo.Value.Weapon))

@@ -54,4 +54,60 @@
             <RangedWeapon_DamageMultiplier>1.1</RangedWeapon_DamageMultiplier>
         </statFactors>
     </KeyzItemLeveling.UpgradeDef>
+
+
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_WR_Damage_Add_1</defName>
+        <label>Damage +</label>
+        <description>+2 to Damage</description>
+        <forThingType>WeaponRanged</forThingType>
+        <cost>20</cost>
+        <statOffsets>
+            <RangedWeapon_DamageMultiplier>2</RangedWeapon_DamageMultiplier>
+        </statOffsets>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_WR_Damage_Add_2</defName>
+        <label>Damage ++</label>
+        <description>+2 to Damage</description>
+        <forThingType>WeaponRanged</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_WR_Damage_Add_1</prerequisite>
+        <statOffsets>
+            <RangedWeapon_DamageMultiplier>2</RangedWeapon_DamageMultiplier>
+        </statOffsets>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_WR_Damage_Add_3</defName>
+        <label>Damage +++</label>
+        <description>+2 to Damage</description>
+        <forThingType>WeaponRanged</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_WR_Damage_Add_2</prerequisite>
+        <statOffsets>
+            <RangedWeapon_DamageMultiplier>2</RangedWeapon_DamageMultiplier>
+        </statOffsets>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_WR_Damage_Add_4</defName>
+        <label>Damage +++++</label>
+        <description>+2 to Damage</description>
+        <forThingType>WeaponRanged</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_WR_Damage_Add_3</prerequisite>
+        <statOffsets>
+            <RangedWeapon_DamageMultiplier>2</RangedWeapon_DamageMultiplier>
+        </statOffsets>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_WR_Damage_Add_5</defName>
+        <label>Damage +++++</label>
+        <description>+2 to Damage</description>
+        <forThingType>WeaponRanged</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_WR_Damage_Add_4</prerequisite>
+        <statOffsets>
+            <RangedWeapon_DamageMultiplier>2</RangedWeapon_DamageMultiplier>
+        </statOffsets>
+    </KeyzItemLeveling.UpgradeDef>
 </Defs>

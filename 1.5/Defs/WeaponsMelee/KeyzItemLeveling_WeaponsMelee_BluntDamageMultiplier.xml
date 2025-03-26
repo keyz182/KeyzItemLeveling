@@ -12,7 +12,7 @@
     </KeyzItemLeveling.UpgradeDef>
     <KeyzItemLeveling.UpgradeDef>
         <defName>KIL_WM_BluntDamage_2</defName>
-        <label>BluntDamage II</label>
+        <label>Blunt Damage II</label>
         <description>+10% to BluntDamage</description>
         <forThingType>WeaponMelee</forThingType>
         <cost>20</cost>
@@ -23,7 +23,7 @@
     </KeyzItemLeveling.UpgradeDef>
     <KeyzItemLeveling.UpgradeDef>
         <defName>KIL_WM_BluntDamage_3</defName>
-        <label>BluntDamage III</label>
+        <label>Blunt Damage III</label>
         <description>+10% to BluntDamage</description>
         <forThingType>WeaponMelee</forThingType>
         <cost>20</cost>
@@ -34,7 +34,7 @@
     </KeyzItemLeveling.UpgradeDef>
     <KeyzItemLeveling.UpgradeDef>
         <defName>KIL_WM_BluntDamage_4</defName>
-        <label>BluntDamage IV</label>
+        <label>Blunt Damage IV</label>
         <description>+10% to BluntDamage</description>
         <forThingType>WeaponMelee</forThingType>
         <cost>20</cost>
@@ -45,7 +45,7 @@
     </KeyzItemLeveling.UpgradeDef>
     <KeyzItemLeveling.UpgradeDef>
         <defName>KIL_WM_BluntDamage_5</defName>
-        <label>BluntDamage V</label>
+        <label>Blunt Damage V</label>
         <description>+10% to BluntDamage</description>
         <forThingType>WeaponMelee</forThingType>
         <cost>20</cost>
@@ -53,5 +53,50 @@
         <statFactors>
             <BluntDamageMultiplier>1.1</BluntDamageMultiplier>
         </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+
+
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_WM_BluntDamage_Add_1</defName>
+        <label>Blunt Damage +</label>
+        <description>+2 to Blunt Damage</description>
+        <forThingType>WeaponMelee</forThingType>
+        <cost>20</cost>
+        <statOffsets>
+            <BluntDamageMultiplier>2</BluntDamageMultiplier>
+        </statOffsets>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_WM_BluntDamage_Add_2</defName>
+        <label>Blunt Damage ++</label>
+        <description>+2 to Blunt Damage</description>
+        <forThingType>WeaponMelee</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_WM_BluntDamage_Add_1</prerequisite>
+        <statOffsets>
+            <BluntDamageMultiplier>2</BluntDamageMultiplier>
+        </statOffsets>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_WM_BluntDamage_Add_3</defName>
+        <label>Blunt Damage +++</label>
+        <description>+2 to Blunt Damage</description>
+        <forThingType>WeaponMelee</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_WM_BluntDamage_Add_2</prerequisite>
+        <statOffsets>
+            <BluntDamageMultiplier>2</BluntDamageMultiplier>
+        </statOffsets>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_WM_BluntDamage_Add_4</defName>
+        <label>Blunt Damage ++++</label>
+        <description>+2 to Blunt Damage</description>
+        <forThingType>WeaponMelee</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_WM_BluntDamage_Add_3</prerequisite>
+        <statOffsets>
+            <BluntDamageMultiplier>2</BluntDamageMultiplier>
+        </statOffsets>
     </KeyzItemLeveling.UpgradeDef>
 </Defs>

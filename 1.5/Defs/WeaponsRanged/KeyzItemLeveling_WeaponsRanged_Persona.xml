@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_WR_Persona_1</defName>
+        <label>Persona I</label>
+        <description>Add a persona weapon trait</description>
+        <forThingType>WeaponRanged</forThingType>
+        <cost>60</cost>
+        <allowPersona>true</allowPersona>
+        <workerClass>KeyzItemLeveling.UpgradeWorker_Persona</workerClass>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_WR_Persona_2</defName>
+        <label>Persona II</label>
+        <description>Add a second persona weapon trait</description>
+        <forThingType>WeaponRanged</forThingType>
+        <cost>120</cost>
+        <prerequisite>KIL_WR_Persona_1</prerequisite>
+        <allowPersona>true</allowPersona>
+        <workerClass>KeyzItemLeveling.UpgradeWorker_Persona</workerClass>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_WR_Persona_3</defName>
+        <label>Persona III</label>
+        <description>Add a third persona weapon trait</description>
+        <forThingType>WeaponRanged</forThingType>
+        <cost>240</cost>
+        <prerequisite>KIL_WR_Persona_2</prerequisite>
+        <allowPersona>true</allowPersona>
+        <workerClass>KeyzItemLeveling.UpgradeWorker_Persona</workerClass>
+    </KeyzItemLeveling.UpgradeDef>
+</Defs>

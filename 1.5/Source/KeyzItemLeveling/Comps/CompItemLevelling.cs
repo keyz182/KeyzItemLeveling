@@ -18,6 +18,8 @@ public class CompItemLevelling : ThingComp
     public Dictionary<StatDef, float> statFactorCache = new Dictionary<StatDef, float>();
     public Dictionary<StatDef, float> statOffsetCache = new Dictionary<StatDef, float>();
 
+    public List<ThingComp> extraComps = new();
+
     public virtual int Level => upgrades.NullOrEmpty() ? 0 : upgrades.Count;
 
     public CompProperties_ItemLevelling Props => (CompProperties_ItemLevelling)props;
@@ -33,9 +35,22 @@ public class CompItemLevelling : ThingComp
         Scribe_Values.Look(ref experience, "experience", 0);
         Scribe_Values.Look(ref tickEquipped, "tickEquipped", -1);
         Scribe_Values.Look(ref NewName, "NewName", null);
+
         if (Scribe.mode == LoadSaveMode.PostLoadInit && upgrades == null)
         {
             upgrades = new HashSet<UpgradeDef>();
+        }
+
+        if (Scribe.mode == LoadSaveMode.LoadingVars)
+        {
+            foreach (ThingComp extraComp in upgrades.SelectMany(u=>u.Worker.GetComps(this)))
+            {
+                extraComps.Add(extraComp);
+            }
+            foreach (ThingComp extraComp in extraComps)
+            {
+                extraComp.PostExposeData();
+            }
         }
     }
 

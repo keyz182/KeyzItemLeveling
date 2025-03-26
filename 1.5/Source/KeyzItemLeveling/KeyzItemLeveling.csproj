@@ -152,6 +152,12 @@
     <ReleaseFiles Update="..\..\Patches\KeyzItemLeveling_StatParts.xml">
       <Link>KeyzItemLeveling\1.5\Patches\KeyzItemLeveling_StatParts.xml</Link>
     </ReleaseFiles>
+    <ReleaseFiles Update="..\..\Defs\WeaponsRanged\KeyzItemLeveling_WeaponsRanged_Persona.xml">
+      <Link>KeyzItemLeveling\1.5\Defs\WeaponsRanged\KeyzItemLeveling_WeaponsRanged_Persona.xml</Link>
+    </ReleaseFiles>
+    <ReleaseFiles Update="..\..\Defs\WeaponsMelee\KeyzItemLeveling_WeaponsMelee_Persona.xml">
+      <Link>KeyzItemLeveling\1.5\Defs\WeaponsMelee\KeyzItemLeveling_WeaponsRanged_Persona.xml</Link>
+    </ReleaseFiles>
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="KeyzItemLeveling\1.5\Defs\WeaponsMelee\**" />

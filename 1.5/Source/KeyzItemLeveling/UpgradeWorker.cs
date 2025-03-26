@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using KeyzItemLeveling.Comps;
 using Verse;
 
@@ -21,5 +22,10 @@ public class UpgradeWorker(UpgradeDef def)
     public virtual void ProcessProjectile(Projectile projectile)
     {
 
+    }
+
+    public virtual IEnumerable<ThingComp> GetComps(CompItemLevelling compItemLevelling)
+    {
+        yield break;
     }
 }

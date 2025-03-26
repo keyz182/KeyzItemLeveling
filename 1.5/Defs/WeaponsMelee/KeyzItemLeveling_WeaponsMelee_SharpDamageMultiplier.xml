@@ -54,4 +54,48 @@
             <SharpDamageMultiplier>1.1</SharpDamageMultiplier>
         </statFactors>
     </KeyzItemLeveling.UpgradeDef>
+
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_WM_SharpDamage_Add_1</defName>
+        <label>Sharp Damage +</label>
+        <description>+2 to Sharp Damage</description>
+        <forThingType>WeaponMelee</forThingType>
+        <cost>20</cost>
+        <statOffsets>
+            <SharpDamageMultiplier>2</SharpDamageMultiplier>
+        </statOffsets>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_WM_SharpDamage_Add_2</defName>
+        <label>Sharp Damage ++</label>
+        <description>+2 to Sharp Damage</description>
+        <forThingType>WeaponMelee</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_WM_SharpDamage_Add_1</prerequisite>
+        <statOffsets>
+            <SharpDamageMultiplier>2</SharpDamageMultiplier>
+        </statOffsets>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_WM_SharpDamage_Add_3</defName>
+        <label>Sharp Damage +++</label>
+        <description>+2 to Sharp Damage</description>
+        <forThingType>WeaponMelee</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_WM_SharpDamage_Add_2</prerequisite>
+        <statOffsets>
+            <SharpDamageMultiplier>2</SharpDamageMultiplier>
+        </statOffsets>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_WM_SharpDamage_Add_4</defName>
+        <label>Sharp Damage ++++</label>
+        <description>+2 to Sharp Damage</description>
+        <forThingType>WeaponMelee</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_WM_SharpDamage_Add_3</prerequisite>
+        <statOffsets>
+            <SharpDamageMultiplier>2</SharpDamageMultiplier>
+        </statOffsets>
+    </KeyzItemLeveling.UpgradeDef>
 </Defs>

@@ -20,7 +20,7 @@ public class UpgradeDialog(CompItemLevelling compItemLevelling, IWindowDrawing c
 
     public UpgradeDef selectedUpgrade;
 
-    public override Vector2 InitialSize => new Vector2(800f, 600f);
+    public override Vector2 InitialSize => new Vector2(1200f, 800f);
 
     public Vector2 scrollPosition = Vector2.zero;
 
@@ -43,7 +43,7 @@ public class UpgradeDialog(CompItemLevelling compItemLevelling, IWindowDrawing c
         RectDivider titleBar = window.NewRow(50f, marginOverride: 0f);
         // Widgets.DrawRectFast(titleBar.Rect.ContractedBy(1f), Color.blue);
 
-        RectDivider titleLabel = titleBar.NewCol(660f, marginOverride: 0f);
+        RectDivider titleLabel = titleBar.NewCol(1060f, marginOverride: 0f);
         GameFont font =  Text.Font;
         Text.Font = GameFont.Medium;
         Widgets.Label(titleLabel.Rect.ContractedBy(10f), $"<size=20%>{compItemLevelling.parent.LabelNoCount} Upgrades</size>");
@@ -63,7 +63,7 @@ public class UpgradeDialog(CompItemLevelling compItemLevelling, IWindowDrawing c
         // Widgets.DrawRectFast(upgradeLabel.Rect.ContractedBy(1f), Color.green);
         Widgets.Label(upgradeLabel.Rect.ContractedBy(5f), selectedUpgrade == null ? "KIL_UpgradeDialog_LabelEmpty".Translate().ToString() : selectedUpgrade.LabelCap.ToString());
 
-        RectDivider upgradeDescription = detailPane.NewRow(414f-60f, marginOverride: 0f);
+        RectDivider upgradeDescription = detailPane.NewRow(614f-60f, marginOverride: 0f);
         // Widgets.DrawRectFast(upgradeDescription.Rect.ContractedBy(1f), Color.white);
         Widgets.Label(upgradeDescription.Rect.ContractedBy(5f),  selectedUpgrade == null ? "" : "KIL_UpgradeDialog_Description".Translate(compItemLevelling.AdjustedCost(selectedUpgrade).ToString(), selectedUpgrade.description).ToString() );
 

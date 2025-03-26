@@ -13,20 +13,21 @@ public class UpgradeDef: Def
     public string iconPath;
 
     public bool allowRenaming = false;
+    public bool allowPersona = false;
 
     public int order = 9999;
 
     public List<StatModifier> statOffsets;
     public List<StatModifier> statFactors;
 
-    public Type WorkerClass = typeof(UpgradeWorker);
+    public Type workerClass = typeof(UpgradeWorker);
     protected UpgradeWorker _UpgradeWorkerInt;
 
     public UpgradeWorker Worker
     {
         get
         {
-            return _UpgradeWorkerInt ??= Activator.CreateInstance(WorkerClass, [this]) as UpgradeWorker;
+            return _UpgradeWorkerInt ??= Activator.CreateInstance(workerClass, [this]) as UpgradeWorker;
         }
     }
 }

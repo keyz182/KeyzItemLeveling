@@ -13,7 +13,7 @@ public static class Verb_Patch
     {
         if(!__result) return;
         if (__instance.caster is not Pawn pawn) return;
-        if (!__instance.EquipmentSource.HasComp<CompItemLevelling>()) return;
+        if (__instance.EquipmentSource == null || !__instance.EquipmentSource.HasComp<CompItemLevelling>()) return;
 
         __instance.EquipmentSource.GetComp<CompItemLevelling>().ProcessVerb(__instance);
     }
