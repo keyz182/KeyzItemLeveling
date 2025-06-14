@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[@Name="BaseMeleeWeapon"]/comps</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[@Name="BaseMeleeWeapon"]</xpath>
+            <value>
+                <comps />
+            </value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[@Name="BaseMeleeWeapon"]/comps</xpath>
+        <value>
+            <li Class="KeyzItemLeveling.Comps.CompProperties_ItemLevelling">
+                <thingType>WeaponMelee</thingType>
+            </li>
+        </value>
+    </Operation>
+
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[@Name="BaseGun"]/comps</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[@Name="BaseGun"]</xpath>
+            <value>
+                <comps />
+            </value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[@Name="BaseGun"]/comps</xpath>
+        <value>
+            <li Class="KeyzItemLeveling.Comps.CompProperties_ItemLevelling">
+                <thingType>WeaponRanged</thingType>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[@Name="BaseWeaponNeolithic"]/comps</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[@Name="BaseWeaponNeolithic"]</xpath>
+            <value>
+                <comps />
+            </value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[@Name="BaseWeaponNeolithic"]/comps</xpath>
+        <value>
+            <li Class="KeyzItemLeveling.Comps.CompProperties_ItemLevelling">
+                <thingType>WeaponRanged</thingType>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[@Name="ArmorMachineableBase"]/comps</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[@Name="ArmorMachineableBase"]</xpath>
+            <value>
+                <comps />
+            </value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[@Name="ArmorMachineableBase"]/comps</xpath>
+        <value>
+            <li Class="KeyzItemLeveling.Comps.CompProperties_ItemLevelling">
+                <thingType>Apparel</thingType>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[@Name="ApparelNoQualityBase"]/comps</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[@Name="ApparelNoQualityBase"]</xpath>
+            <value>
+                <comps />
+            </value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[@Name="ApparelNoQualityBase"]/comps</xpath>
+        <value>
+            <li Class="KeyzItemLeveling.Comps.CompProperties_ItemLevelling">
+                <thingType>Apparel</thingType>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[@Name="BaseWeapon_Bladelink"]/comps</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[@Name="BaseWeapon_Bladelink"]</xpath>
+            <value>
+                <comps />
+            </value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[@Name="BaseWeapon_Bladelink"]/comps</xpath>
+        <value>
+            <li Class="KeyzItemLeveling.Comps.CompProperties_ItemLevelling">
+                <thingType>WeaponMelee</thingType>
+            </li>
+        </value>
+    </Operation>
+</Patch>

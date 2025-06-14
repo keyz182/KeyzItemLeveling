@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_InsulationCold_1</defName>
+        <label>Insulation Cold I</label>
+        <description>+20% to Insulation Cold</description>
+        <forThingType>Apparel</forThingType>
+        <cost>10</cost>
+        <statFactors>
+            <Insulation_Cold>1.5</Insulation_Cold>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_InsulationCold_2</defName>
+        <label>Insulation Cold II</label>
+        <description>+20% to Insulation Cold</description>
+        <forThingType>Apparel</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_Apparel_InsulationCold_1</prerequisite>
+        <statFactors>
+            <Insulation_Cold>1.5</Insulation_Cold>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_InsulationCold_3</defName>
+        <label>Insulation Cold III</label>
+        <description>+20% to Insulation Cold</description>
+        <forThingType>Apparel</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_Apparel_InsulationCold_2</prerequisite>
+        <statFactors>
+            <Insulation_Cold>1.5</Insulation_Cold>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_InsulationCold_4</defName>
+        <label>Insulation Cold IV</label>
+        <description>+20% to Insulation Cold</description>
+        <forThingType>Apparel</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_Apparel_InsulationCold_3</prerequisite>
+        <statFactors>
+            <Insulation_Cold>1.5</Insulation_Cold>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_InsulationCold_5</defName>
+        <label>Insulation Cold V</label>
+        <description>+20% to Insulation Cold</description>
+        <forThingType>Apparel</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_Apparel_InsulationCold_4</prerequisite>
+        <statFactors>
+            <Insulation_Cold>1.5</Insulation_Cold>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+</Defs>

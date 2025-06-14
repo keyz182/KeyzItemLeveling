@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_ArmourHeat_1</defName>
+        <label>Armour Heat I</label>
+        <description>+20% to Armour Heat</description>
+        <forThingType>Apparel</forThingType>
+        <cost>10</cost>
+        <statFactors>
+            <ArmorRating_Heat>1.2</ArmorRating_Heat>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_ArmourHeat_2</defName>
+        <label>Armour Heat II</label>
+        <description>+20% to Armour Heat</description>
+        <forThingType>Apparel</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_Apparel_ArmourHeat_1</prerequisite>
+        <statFactors>
+            <ArmorRating_Heat>1.2</ArmorRating_Heat>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_ArmourHeat_3</defName>
+        <label>Armour Heat III</label>
+        <description>+20% to Armour Heat</description>
+        <forThingType>Apparel</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_Apparel_ArmourHeat_2</prerequisite>
+        <statFactors>
+            <ArmorRating_Heat>1.2</ArmorRating_Heat>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_ArmourHeat_4</defName>
+        <label>Armour Heat IV</label>
+        <description>+20% to Armour Heat</description>
+        <forThingType>Apparel</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_Apparel_ArmourHeat_3</prerequisite>
+        <statFactors>
+            <ArmorRating_Heat>1.2</ArmorRating_Heat>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_ArmourHeat_5</defName>
+        <label>Armour Heat V</label>
+        <description>+20% to Armour Heat</description>
+        <forThingType>Apparel</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_Apparel_ArmourHeat_4</prerequisite>
+        <statFactors>
+            <ArmorRating_Heat>1.2</ArmorRating_Heat>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_ArmourHeat_6</defName>
+        <label>Armour Heat VI</label>
+        <description>+20% to Armour Heat</description>
+        <forThingType>Apparel</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_Apparel_ArmourHeat_5</prerequisite>
+        <statFactors>
+            <ArmorRating_Heat>1.2</ArmorRating_Heat>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_ArmourHeat_7</defName>
+        <label>Armour Heat VII</label>
+        <description>+20% to Armour Heat</description>
+        <forThingType>Apparel</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_Apparel_ArmourHeat_6</prerequisite>
+        <statFactors>
+            <ArmorRating_Heat>1.2</ArmorRating_Heat>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_ArmourHeat_8</defName>
+        <label>Armour Heat VIII</label>
+        <description>+20% to Armour Heat</description>
+        <forThingType>Apparel</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_Apparel_ArmourHeat_7</prerequisite>
+        <statFactors>
+            <ArmorRating_Heat>1.2</ArmorRating_Heat>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_ArmourHeat_9</defName>
+        <label>Armour Heat XI</label>
+        <description>+20% to Armour Heat</description>
+        <forThingType>Apparel</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_Apparel_ArmourHeat_8</prerequisite>
+        <statFactors>
+            <ArmorRating_Heat>1.2</ArmorRating_Heat>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_ArmourHeat_10</defName>
+        <label>Armour Heat X</label>
+        <description>+20% to Armour Heat</description>
+        <forThingType>Apparel</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_Apparel_ArmourHeat_9</prerequisite>
+        <statFactors>
+            <ArmorRating_Heat>1.2</ArmorRating_Heat>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+</Defs>

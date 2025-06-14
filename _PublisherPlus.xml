@@ -4,6 +4,7 @@
     <exclude>.editorconfig</exclude>
     <exclude>.git</exclude>
     <exclude>1.5\Source</exclude>
+    <exclude>1.6\Source</exclude>
     <exclude>Assets</exclude>
     <exclude>modList.xml</exclude>
     <exclude>release.bat</exclude>

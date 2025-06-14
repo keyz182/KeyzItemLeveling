@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_WR_Rename</defName>
+        <label>Rename Weapon</label>
+        <description>Allows you to rename the weapon</description>
+        <forThingType>WeaponRanged</forThingType>
+        <allowRenaming>true</allowRenaming>
+        <order>1</order>
+        <cost>50</cost>
+    </KeyzItemLeveling.UpgradeDef>
+</Defs>

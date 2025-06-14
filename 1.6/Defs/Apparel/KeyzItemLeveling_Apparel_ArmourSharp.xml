@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_ArmourSharp_1</defName>
+        <label>Armour Sharp I</label>
+        <description>+20% to Armour Sharp</description>
+        <forThingType>Apparel</forThingType>
+        <cost>10</cost>
+        <statFactors>
+            <ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_ArmourSharp_2</defName>
+        <label>Armour Sharp II</label>
+        <description>+20% to Armour Sharp</description>
+        <forThingType>Apparel</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_Apparel_ArmourSharp_1</prerequisite>
+        <statFactors>
+            <ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_ArmourSharp_3</defName>
+        <label>Armour Sharp III</label>
+        <description>+20% to Armour Sharp</description>
+        <forThingType>Apparel</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_Apparel_ArmourSharp_2</prerequisite>
+        <statFactors>
+            <ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_ArmourSharp_4</defName>
+        <label>Armour Sharp IV</label>
+        <description>+20% to Armour Sharp</description>
+        <forThingType>Apparel</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_Apparel_ArmourSharp_3</prerequisite>
+        <statFactors>
+            <ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_ArmourSharp_5</defName>
+        <label>Armour Sharp V</label>
+        <description>+20% to Armour Sharp</description>
+        <forThingType>Apparel</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_Apparel_ArmourSharp_4</prerequisite>
+        <statFactors>
+            <ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+
+
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_ArmourSharp_6</defName>
+        <label>Armour Sharp VI</label>
+        <description>+20% to Armour Sharp</description>
+        <forThingType>Apparel</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_Apparel_ArmourSharp_5</prerequisite>
+        <statFactors>
+            <ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_ArmourSharp_7</defName>
+        <label>Armour Sharp VII</label>
+        <description>+20% to Armour Sharp</description>
+        <forThingType>Apparel</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_Apparel_ArmourSharp_6</prerequisite>
+        <statFactors>
+            <ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_ArmourSharp_8</defName>
+        <label>Armour Sharp VIII</label>
+        <description>+20% to Armour Sharp</description>
+        <forThingType>Apparel</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_Apparel_ArmourSharp_7</prerequisite>
+        <statFactors>
+            <ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_ArmourSharp_9</defName>
+        <label>Armour Sharp IX</label>
+        <description>+20% to Armour Sharp</description>
+        <forThingType>Apparel</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_Apparel_ArmourSharp_8</prerequisite>
+        <statFactors>
+            <ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_ArmourSharp_10</defName>
+        <label>Armour Sharp X</label>
+        <description>+20% to Armour Sharp</description>
+        <forThingType>Apparel</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_Apparel_ArmourSharp_9</prerequisite>
+        <statFactors>
+            <ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+</Defs>

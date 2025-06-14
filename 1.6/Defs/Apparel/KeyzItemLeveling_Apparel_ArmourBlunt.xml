@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_ArmourBlunt_1</defName>
+        <label>Armour Blunt I</label>
+        <description>+20% to Armour Blunt</description>
+        <forThingType>Apparel</forThingType>
+        <cost>10</cost>
+        <statFactors>
+            <ArmorRating_Blunt>1.2</ArmorRating_Blunt>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_ArmourBlunt_2</defName>
+        <label>Armour Blunt II</label>
+        <description>+20% to Armour Blunt</description>
+        <forThingType>Apparel</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_Apparel_ArmourBlunt_1</prerequisite>
+        <statFactors>
+            <ArmorRating_Blunt>1.2</ArmorRating_Blunt>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_ArmourBlunt_3</defName>
+        <label>Armour Blunt III</label>
+        <description>+20% to Armour Blunt</description>
+        <forThingType>Apparel</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_Apparel_ArmourBlunt_2</prerequisite>
+        <statFactors>
+            <ArmorRating_Blunt>1.2</ArmorRating_Blunt>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_ArmourBlunt_4</defName>
+        <label>Armour Blunt IV</label>
+        <description>+20% to Armour Blunt</description>
+        <forThingType>Apparel</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_Apparel_ArmourBlunt_3</prerequisite>
+        <statFactors>
+            <ArmorRating_Blunt>1.2</ArmorRating_Blunt>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_ArmourBlunt_5</defName>
+        <label>Armour Blunt V</label>
+        <description>+20% to Armour Blunt</description>
+        <forThingType>Apparel</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_Apparel_ArmourBlunt_4</prerequisite>
+        <statFactors>
+            <ArmorRating_Blunt>1.2</ArmorRating_Blunt>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_ArmourBlunt_6</defName>
+        <label>Armour Blunt VI</label>
+        <description>+20% to Armour Blunt</description>
+        <forThingType>Apparel</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_Apparel_ArmourBlunt_5</prerequisite>
+        <statFactors>
+            <ArmorRating_Blunt>1.2</ArmorRating_Blunt>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_ArmourBlunt_7</defName>
+        <label>Armour Blunt VII</label>
+        <description>+20% to Armour Blunt</description>
+        <forThingType>Apparel</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_Apparel_ArmourBlunt_6</prerequisite>
+        <statFactors>
+            <ArmorRating_Blunt>1.2</ArmorRating_Blunt>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_ArmourBlunt_8</defName>
+        <label>Armour Blunt VIII</label>
+        <description>+20% to Armour Blunt</description>
+        <forThingType>Apparel</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_Apparel_ArmourBlunt_7</prerequisite>
+        <statFactors>
+            <ArmorRating_Blunt>1.2</ArmorRating_Blunt>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_ArmourBlunt_9</defName>
+        <label>Armour Blunt IX</label>
+        <description>+20% to Armour Blunt</description>
+        <forThingType>Apparel</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_Apparel_ArmourBlunt_8</prerequisite>
+        <statFactors>
+            <ArmorRating_Blunt>1.2</ArmorRating_Blunt>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_Apparel_ArmourBlunt_10</defName>
+        <label>Armour Blunt X</label>
+        <description>+20% to Armour Blunt</description>
+        <forThingType>Apparel</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_Apparel_ArmourBlunt_9</prerequisite>
+        <statFactors>
+            <ArmorRating_Blunt>1.2</ArmorRating_Blunt>
+        </statFactors>
+    </KeyzItemLeveling.UpgradeDef>
+</Defs>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_WR_Accuracy_1</defName>
+        <label>Accuracy I</label>
+        <description>+2% to Accuracy</description>
+        <forThingType>WeaponRanged</forThingType>
+        <cost>10</cost>
+        <statOffsets>
+            <AccuracyLong>.02</AccuracyLong>
+            <AccuracyShort>.02</AccuracyShort>
+            <AccuracyMedium>.02</AccuracyMedium>
+        </statOffsets>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_WR_Accuracy_2</defName>
+        <label>Accuracy II</label>
+        <description>+2% to Accuracy</description>
+        <forThingType>WeaponRanged</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_WR_Accuracy_1</prerequisite>
+        <statOffsets>
+            <AccuracyTouch>.02</AccuracyTouch>
+            <AccuracyLong>.02</AccuracyLong>
+            <AccuracyShort>.02</AccuracyShort>
+            <AccuracyMedium>.02</AccuracyMedium>
+        </statOffsets>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_WR_Accuracy_3</defName>
+        <label>Accuracy III</label>
+        <description>+2% to Accuracy</description>
+        <forThingType>WeaponRanged</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_WR_Accuracy_2</prerequisite>
+        <statOffsets>
+            <AccuracyTouch>.02</AccuracyTouch>
+            <AccuracyLong>.02</AccuracyLong>
+            <AccuracyShort>.02</AccuracyShort>
+            <AccuracyMedium>.02</AccuracyMedium>
+        </statOffsets>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_WR_Accuracy_4</defName>
+        <label>Accuracy IV</label>
+        <description>+2% to Accuracy</description>
+        <forThingType>WeaponRanged</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_WR_Accuracy_3</prerequisite>
+        <statOffsets>
+            <AccuracyTouch>.02</AccuracyTouch>
+            <AccuracyLong>.02</AccuracyLong>
+            <AccuracyShort>.02</AccuracyShort>
+            <AccuracyMedium>.02</AccuracyMedium>
+        </statOffsets>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_WR_Accuracy_5</defName>
+        <label>Accuracy V</label>
+        <description>+2% to Accuracy</description>
+        <forThingType>WeaponRanged</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_WR_Accuracy_4</prerequisite>
+        <statOffsets>
+            <AccuracyTouch>.02</AccuracyTouch>
+            <AccuracyLong>.02</AccuracyLong>
+            <AccuracyShort>.02</AccuracyShort>
+            <AccuracyMedium>.02</AccuracyMedium>
+        </statOffsets>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_WR_Accuracy_Long</defName>
+        <label>Accuracy Long Range</label>
+        <description>+10% to Accuracy Long Range</description>
+        <forThingType>WeaponRanged</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_WR_Accuracy_5</prerequisite>
+        <statOffsets>
+            <AccuracyLong>.1</AccuracyLong>
+        </statOffsets>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_WR_Accuracy_Medium</defName>
+        <label>Accuracy Medium Range</label>
+        <description>+10% to Accuracy Medium Range</description>
+        <forThingType>WeaponRanged</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_WR_Accuracy_5</prerequisite>
+        <statOffsets>
+            <AccuracyMedium>.1</AccuracyMedium>
+        </statOffsets>
+    </KeyzItemLeveling.UpgradeDef>
+    <KeyzItemLeveling.UpgradeDef>
+        <defName>KIL_WR_Accuracy_Short</defName>
+        <label>Accuracy Short Range</label>
+        <description>+10% to Accuracy Short Range</description>
+        <forThingType>WeaponRanged</forThingType>
+        <cost>20</cost>
+        <prerequisite>KIL_WR_Accuracy_5</prerequisite>
+        <statOffsets>
+            <AccuracyShort>.1</AccuracyShort>
+        </statOffsets>
+    </KeyzItemLeveling.UpgradeDef>
+</Defs>
