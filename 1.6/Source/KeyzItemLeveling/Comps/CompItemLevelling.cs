@@ -163,12 +163,12 @@ public class CompItemLevelling : ThingComp
 
     public virtual void ProcessVerb(Verb verb)
     {
-        ModLog.Log($"Verb processed {verb.ToString()}");
+        ModLog.Debug($"Verb processed {verb.ToString()}");
     }
 
     public virtual void ProcessProjectileLaunch(Projectile projectile)
     {
-        ModLog.Log($"Projectile launch processed {projectile.ToString()}");
+        ModLog.Debug($"Projectile launch processed {projectile.ToString()}");
     }
     public override void Notify_Unequipped(Pawn pawn)
     {
@@ -182,12 +182,12 @@ public class CompItemLevelling : ThingComp
 
     public override void Notify_Killed(Map prevMap, DamageInfo? dinfo = null)
     {
-        ModLog.Log($"{parent.LabelCap} Notify_Killed {dinfo}");
+        ModLog.Debug($"{parent.LabelCap} Notify_Killed {dinfo}");
     }
 
     public override void Notify_KilledPawn(Pawn pawn)
     {
-        ModLog.Log($"{parent.LabelCap} Notify_KilledPawn {pawn.LabelCap}");
+        ModLog.Debug($"{parent.LabelCap} Notify_KilledPawn {pawn.LabelCap}");
         experience += KeyzItemLevelingMod.settings.ExperiencePerKill;
     }
 

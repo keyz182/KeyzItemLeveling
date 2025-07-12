@@ -9,7 +9,7 @@ public class Settings : ModSettings
     public float ExperiencePerHourEquipped = 0.01f;
     public float ExperiencePerUse = 0.1f;
     public float ExperiencePerKill = 1f;
-    public float ExperiencePerDamageReceived = 0.025f;
+    public float ExperiencePerDamageReceived = 0.1f;
 
     public void DoWindowContents(Rect wrect)
     {
@@ -38,6 +38,6 @@ public class Settings : ModSettings
         Scribe_Values.Look(ref ExperiencePerHourEquipped, "ExperiencePerHourEquipped", 0.01f);
         Scribe_Values.Look(ref ExperiencePerUse, "ExperiencePerUse", 0.1f);
         Scribe_Values.Look(ref ExperiencePerUse, "ExperiencePerKill", 1f);
-        Scribe_Values.Look(ref ExperiencePerUse, "ExperiencePerDamageReceived", 0.025f);
+        Scribe_Values.Look(ref ExperiencePerUse, "ExperiencePerDamageReceived", 0.1f);
     }
 }
