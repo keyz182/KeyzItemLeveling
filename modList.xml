@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModsConfigData>
-    <version>1.5.4297 rev1078</version>
     <activeMods>
         <li>brrainz.harmony</li>
         <li>ludeon.rimworld</li>
@@ -10,11 +9,8 @@
         <li>ludeon.rimworld.anomaly</li>
         <li>keyz.keyzitemleveling</li>
         <li>nightmare.jaxe.publisherplusmultiversionfork</li>
-        <!-- <li>sandy.rpgstyleinventory.avilmask.revamped</li> -->
         <li>jaxe.rimhud</li>
-        <!-- <li>owlchemist.tacticowl</li> -->
         <li>oskarpotocki.vanillafactionsexpanded.core</li>
-        <!-- <li>pphhyy.urmc</li> -->
     </activeMods>
     <knownExpansions>
         <li>ludeon.rimworld</li>
