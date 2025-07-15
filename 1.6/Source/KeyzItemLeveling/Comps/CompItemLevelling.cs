@@ -95,7 +95,8 @@ public class CompItemLevelling : ThingComp
         return Props.thingType == upgrade.forThingType
                && (upgrade.prerequisite == null || upgrades.Any(def => def == upgrade.prerequisite))
                && upgrade.Worker.CanApply(this)
-               && experience > AdjustedCost(upgrade);
+               && experience > AdjustedCost(upgrade)
+               && (upgrades.NullOrEmpty() || !upgrades.Contains(upgrade));
     }
 
     public virtual bool TryApplyUpgrade(UpgradeDef upgrade)

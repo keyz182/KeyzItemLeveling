@@ -73,7 +73,7 @@ public class UpgradeDialog(CompItemLevelling compItemLevelling, IWindowDrawing c
         // Widgets.DrawRectFast(acceptBtn.Rect.ContractedBy(1f), Color.magenta);
         Rect btnRect = acceptBtn.Rect.ContractedBy(5f);
         btnRect.yMin += 10;
-        if (Widgets.ButtonText(btnRect, "KIL_UpgradeDialog_Apply".Translate()))
+        if (Widgets.ButtonText(btnRect, "KIL_UpgradeDialog_Apply".Translate(), active: selectedUpgrade != null && compItemLevelling.IsUpgradeValid(selectedUpgrade)))
         {
             if (!compItemLevelling.TryApplyUpgrade(selectedUpgrade))
             {
@@ -140,9 +140,7 @@ public class UpgradeDialog(CompItemLevelling compItemLevelling, IWindowDrawing c
                         if (compItemLevelling.upgrades.Contains(node.def))
                         {
                             researchColor = TexUI.FinishedResearchColor;
-                        }
-
-                        if (!compItemLevelling.IsUpgradeValid(node.def))
+                        }else if (!compItemLevelling.IsUpgradeValid(node.def))
                         {
                             researchColor = TexUI.LockedResearchColor;
                         }
