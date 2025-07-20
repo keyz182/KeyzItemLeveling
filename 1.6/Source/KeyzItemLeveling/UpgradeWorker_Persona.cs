@@ -36,6 +36,11 @@ public class UpgradeWorker_Persona(UpgradeDef def) : UpgradeWorker(def)
 
         traitInfo.Value.SetValue(comp, traits);
 
+        if (compItemLevelling.parent.ParentHolder is Pawn_EquipmentTracker p)
+        {
+            comp.CodeFor(p.pawn);
+        }
+
         Rand.PopState();
         return true;
     }
