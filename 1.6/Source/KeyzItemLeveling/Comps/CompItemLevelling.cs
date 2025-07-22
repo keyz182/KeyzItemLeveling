@@ -63,7 +63,8 @@ public class CompItemLevelling : ThingComp
         foreach (UpgradeDef upgradeDef in CachedAllNodes.Where(IsUpgradeValid).Where(def=>!HaveNotifiedFor.Contains(def)))
         {
             HaveNotifiedFor.Add(upgradeDef);
-            Messages.Message("KIL_UpgradeAvailable".Translate(upgradeDef.LabelCap, parent.LabelCap), MessageTypeDefOf.PositiveEvent);
+            Message msg = new("KIL_UpgradeAvailable".Translate(upgradeDef.LabelCap, parent.LabelCap), MessageTypeDefOf.PositiveEvent, new LookTargets([parent]));
+            Messages.Message(msg);
         }
     }
 
