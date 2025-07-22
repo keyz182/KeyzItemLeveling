@@ -63,7 +63,9 @@ public static class Pawn_Patch
             resetBtn.icon = Reset;
             resetBtn.action = delegate()
             {
-                List<FloatMenuOption> list = allComps.Select(comp => new FloatMenuOption(comp.parent.LabelCap, delegate { comp.experience = 0; comp.upgrades.Clear();}, comp.parent, Color.white, MenuOptionPriority.Default, null, null, 0f, null, null)).ToList();
+                List<FloatMenuOption> list = allComps.Select(comp => new FloatMenuOption(comp.parent.LabelCap, delegate { comp.experience = 0; comp.upgrades.Clear();
+                    comp.HaveNotifiedFor = [];
+                }, comp.parent, Color.white, MenuOptionPriority.Default, null, null, 0f, null, null)).ToList();
                 Find.WindowStack.Add(new FloatMenu(list));
             };
 

@@ -5,10 +5,14 @@
     <KeyzItemLeveling_Settings_ExperiencePerUse>Experience per use: [{0}]</KeyzItemLeveling_Settings_ExperiencePerUse>
     <KeyzItemLeveling_Settings_ExperiencePerKill>Experience per kill: [{0}]</KeyzItemLeveling_Settings_ExperiencePerKill>
     <KeyzItemLeveling_Settings_ExperiencePerDamageReceived>Experience per damage received: [{0}]</KeyzItemLeveling_Settings_ExperiencePerDamageReceived>
+    <KeyzItemLeveling_Settings_UpgradeAvailableNotifications>Enable upgrade available messages.</KeyzItemLeveling_Settings_UpgradeAvailableNotifications>
+
     <KIL_CompItemLevelling_CompInspectStringExtra>Current Experience: {0}\nCurrent Level: {1}</KIL_CompItemLevelling_CompInspectStringExtra>
     <KIL_UpgradeDialog_LabelEmpty>Select an Upgrade -></KIL_UpgradeDialog_LabelEmpty>
     <KIL_UpgradeDialog_Description>Cost: {0}xp\n\n{1}</KIL_UpgradeDialog_Description>
     <KIL_UpgradeDialog_Experience>Current Experience: {0}</KIL_UpgradeDialog_Experience>
     <KIL_UpgradeDialog_Apply>Apply</KIL_UpgradeDialog_Apply>
     <KIL_RenameDialog_Label>Rename:</KIL_RenameDialog_Label>
+
+    <KIL_UpgradeAvailable>Upgrade available on {1} => {0}</KIL_UpgradeAvailable>
 </LanguageData>

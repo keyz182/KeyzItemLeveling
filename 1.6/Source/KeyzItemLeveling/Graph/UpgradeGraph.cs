@@ -102,6 +102,22 @@ public class UpgradeGraph(ThingType thingType)
         return node;
     }
 
+    public IEnumerable<Node> AllNodes => Roots.SelectMany(TraverseNodesDepthFirst);
+
+    public IEnumerable<Node> TraverseNodesDepthFirst(Node startNode)
+    {
+        if (startNode == null)
+            yield break;
+
+        yield return startNode;
+
+        foreach (Node child in startNode.Children.SelectMany(TraverseNodesDepthFirst))
+        {
+            yield return child;
+        }
+    }
+
+
     protected int? CachedDepth;
     protected int? CachedWidth;
 

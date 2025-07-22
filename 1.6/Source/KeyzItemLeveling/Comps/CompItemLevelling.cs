@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using KeyzItemLeveling.Graph;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -10,7 +11,17 @@ namespace KeyzItemLeveling.Comps;
 [StaticConstructorOnStartup]
 public class CompItemLevelling : ThingComp
 {
-    public float experience = 0;
+    private float _experience = 0;
+
+    public float experience
+    {
+        get => _experience;
+        set
+        {
+            _experience = value;
+            CheckShouldNotifyLevelUp();
+        }
+    }
     public HashSet<UpgradeDef> upgrades = new();
 
     public int tickEquipped = -1;
@@ -28,22 +39,65 @@ public class CompItemLevelling : ThingComp
 
     public virtual bool AllowRenaming => !upgrades.NullOrEmpty() && upgrades.Any(upg => upg.allowRenaming);
 
+    public HashSet<UpgradeDef> HaveNotifiedFor = [];
+
+    public HashSet<UpgradeDef> _CachedAllNodes = [];
+
+    public HashSet<UpgradeDef> CachedAllNodes
+    {
+        get
+        {
+            if (_CachedAllNodes.NullOrEmpty())
+            {
+                UpgradeGraph graph = UpgradeGraph.GraphForThingType(Props.thingType);
+                _CachedAllNodes = graph.AllNodes.Select(node => node.def).ToHashSet();
+            }
+
+            return _CachedAllNodes;
+        }
+    }
+
+    public void CheckShouldNotifyLevelUp()
+    {
+        if(!KeyzItemLevelingMod.settings.UpgradeAvailableNotifications) return;
+        foreach (UpgradeDef upgradeDef in CachedAllNodes.Where(IsUpgradeValid).Where(def=>!HaveNotifiedFor.Contains(def)))
+        {
+            HaveNotifiedFor.Add(upgradeDef);
+            Messages.Message("KIL_UpgradeAvailable".Translate(upgradeDef.LabelCap, parent.LabelCap), MessageTypeDefOf.PositiveEvent);
+        }
+    }
+
+    public void RecalculateLevelUpNotifications()
+    {
+        if(!KeyzItemLevelingMod.settings.UpgradeAvailableNotifications) return;
+        HaveNotifiedFor = [];
+
+        foreach (UpgradeDef upgradeDef in CachedAllNodes.Where(IsUpgradeValid))
+        {
+            HaveNotifiedFor.Add(upgradeDef);
+        }
+    }
+
     public override void PostExposeData()
     {
         base.PostExposeData();
         Scribe_Collections.Look(ref upgrades, "upgrades", LookMode.Def);
-        Scribe_Values.Look(ref experience, "experience", 0);
+        Scribe_Values.Look(ref _experience, "experience", 0);
         Scribe_Values.Look(ref tickEquipped, "tickEquipped", -1);
         Scribe_Values.Look(ref NewName, "NewName", null);
 
         if (Scribe.mode == LoadSaveMode.PostLoadInit && upgrades == null)
         {
             upgrades = new HashSet<UpgradeDef>();
+            HaveNotifiedFor = new HashSet<UpgradeDef>();
+
+            if(KeyzItemLevelingMod.settings.UpgradeAvailableNotifications) RecalculateLevelUpNotifications();
         }
 
         if (Scribe.mode == LoadSaveMode.LoadingVars)
         {
             if(upgrades == null) upgrades = new HashSet<UpgradeDef>();
+            if(HaveNotifiedFor == null) HaveNotifiedFor = new HashSet<UpgradeDef>();
             foreach (ThingComp extraComp in upgrades.SelectMany(u=>u.Worker.GetComps(this)))
             {
                 if (extraComp != null)
@@ -111,6 +165,8 @@ public class CompItemLevelling : ThingComp
         {
             statDef.Worker.TryClearCache();
         }
+
+        if(KeyzItemLevelingMod.settings.UpgradeAvailableNotifications) RecalculateLevelUpNotifications();
 
         return true;
     }
