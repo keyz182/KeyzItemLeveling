@@ -18,6 +18,8 @@ public class CompItemLevelling : ThingComp
         get => _experience;
         set
         {
+            // no upgrades on unworn items
+            if(pawn == null) return;
             _experience = value;
             CheckShouldNotifyLevelUp();
         }
@@ -26,10 +28,23 @@ public class CompItemLevelling : ThingComp
 
     public int tickEquipped = -1;
 
-    public Dictionary<StatDef, float> statFactorCache = new Dictionary<StatDef, float>();
-    public Dictionary<StatDef, float> statOffsetCache = new Dictionary<StatDef, float>();
+    public Dictionary<StatDef, float> statFactorCache = new();
+    public Dictionary<StatDef, float> statOffsetCache = new();
 
     public List<ThingComp> extraComps = new();
+
+    public Pawn pawn
+    {
+        get
+        {
+            return parent.ParentHolder switch
+            {
+                Pawn_EquipmentTracker tracker => tracker.pawn,
+                Pawn_ApparelTracker appTracker => appTracker.pawn,
+                _ => null
+            };
+        }
+    }
 
     public virtual int Level => upgrades.NullOrEmpty() ? 0 : upgrades.Count;
 
@@ -60,10 +75,18 @@ public class CompItemLevelling : ThingComp
     public void CheckShouldNotifyLevelUp()
     {
         if(!KeyzItemLevelingMod.settings.UpgradeAvailableNotifications) return;
+        if(!pawn.Faction.IsPlayer) return;
+
+        bool shouldNotify = false;
         foreach (UpgradeDef upgradeDef in CachedAllNodes.Where(IsUpgradeValid).Where(def=>!HaveNotifiedFor.Contains(def)))
         {
+            shouldNotify = true;
             HaveNotifiedFor.Add(upgradeDef);
-            Message msg = new("KIL_UpgradeAvailable".Translate(upgradeDef.LabelCap, parent.LabelCap), MessageTypeDefOf.PositiveEvent, new LookTargets([parent]));
+        }
+
+        if (shouldNotify)
+        {
+            Message msg = new("KIL_UpgradeAvailable".Translate(pawn.LabelCap, parent.LabelCap), MessageTypeDefOf.PositiveEvent, new LookTargets([parent]));
             Messages.Message(msg);
         }
     }
@@ -134,7 +157,7 @@ public class CompItemLevelling : ThingComp
 
     public override string CompInspectStringExtra()
     {
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new();
         // sb.Append("\n");
         sb.Append("KIL_CompItemLevelling_CompInspectStringExtra".Translate(Experience, Level));
 
@@ -284,7 +307,7 @@ public class CompItemLevelling : ThingComp
 
     public virtual string GetExplanationForStat(StatDef stat)
     {
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new();
         foreach (UpgradeDef upgradeDef in upgrades.Where(upgrade=>!upgrade.statFactors.NullOrEmpty() && upgrade.statFactors.Any(factor=>factor.stat == stat)))
         {
             sb.AppendLine($"{upgradeDef.LabelCap} {upgradeDef.statFactors.First(factor => factor.stat == stat).ToStringAsFactor}");

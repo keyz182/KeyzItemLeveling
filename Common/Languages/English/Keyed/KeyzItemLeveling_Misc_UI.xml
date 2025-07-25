@@ -14,5 +14,5 @@
     <KIL_UpgradeDialog_Apply>Apply</KIL_UpgradeDialog_Apply>
     <KIL_RenameDialog_Label>Rename:</KIL_RenameDialog_Label>
 
-    <KIL_UpgradeAvailable>Upgrade available on {1} => {0}</KIL_UpgradeAvailable>
+    <KIL_UpgradeAvailable>{0} has upgrades available on {1}</KIL_UpgradeAvailable>
 </LanguageData>
