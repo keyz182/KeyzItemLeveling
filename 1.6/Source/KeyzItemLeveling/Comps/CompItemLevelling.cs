@@ -75,6 +75,7 @@ public class CompItemLevelling : ThingComp
     public void CheckShouldNotifyLevelUp()
     {
         if(!KeyzItemLevelingMod.settings.UpgradeAvailableNotifications) return;
+        if(pawn.Faction == null) return;
         if(!pawn.Faction.IsPlayer) return;
 
         bool shouldNotify = false;
